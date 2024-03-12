@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Solitaire</title>
+    <!-- google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- style link  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- js link  -->
+    <link rel="stylesheet" href="">
+
+</head>
+<style>
+    body {
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+
+    }
+</style>
+
+<body>
+
+    <div class="welcome_pop-up">
+        <div class="mt">
+            <p class="welcome_text">Welcome to Spider Solitaire!</p>
+        </div>
+        <img class="img_king" src="img/welcome-king.png" alt="img">
+        <div class="lets_mt">
+            <p class="lets_text">Let’s learn the basic rules of Spider Solitaire</p>
+        </div>
+        <button class="start_btn">Start Tutorial</button>
+        <a class="skip" href="Skip">
+            <p>Skip</p>
+        </a>
+    </div>
+</body>
+
+</html>
