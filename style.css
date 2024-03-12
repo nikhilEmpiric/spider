@@ -177,7 +177,6 @@ body::before{
 .card-img img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 .card-img{
     display: grid;
