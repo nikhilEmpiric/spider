@@ -178,6 +178,8 @@ body::before{
 .card-img img{
     height: 100%;
     width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
 }
 .card-img{
     display: grid;
@@ -191,6 +193,19 @@ body::before{
     margin-right: auto;
     height: 520px;
     overflow-y: scroll;
+}
+.card-img::-webkit-scrollbar {
+    display: none;
+}
+.card-box{
+    position: relative;
+}
+.card-name{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 
