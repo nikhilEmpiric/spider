@@ -423,7 +423,7 @@ body::before{
     }
     .center_box{
         padding: 0;
-        transform: translate(50%, 3%);
+        transform: translate(50%, 0%);
         position: relative;
         right: 50%;
         top: 0%;
@@ -431,21 +431,18 @@ body::before{
     .box-bg{
         border: none;
         background-color: #000000;
-        padding: 20px 0px 0 0px;
+        padding: 0px 0px 0 0px;
         border-radius: 0px;
     }
     body::before {
         opacity: 1 !important;
     }
-    .text-button {
+    .box-sticky {
         position: sticky;
         top: 0;
         z-index: 999999;
-    }
-    .btn-three{
-        position: sticky;
-        top: 35px;
-        z-index: 999999;
+        background-color: black;
+        padding: 30px 0px 10px 0;
     }
 }
 @media screen and (max-width: 380px){
