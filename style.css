@@ -5,10 +5,10 @@ body{
     margin: 0px;
     padding: 0px;
     background-image:url(img/spider_bg-img.png);
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     font-family: "Montserrat";
 }
@@ -119,12 +119,8 @@ body::before{
 
 /* ----------- /customization(background) ---------------------- */
 .center_box{
-    transform: translate(50%, -50%);
-    bottom: 50%;
     position: relative;
-    right: 50%;
-    top: 50%;
-    padding: 0 20px;
+    padding: 20px;
 }
 .box-bg{
     max-width: 1212px;
@@ -237,7 +233,7 @@ body::before{
 
 @media screen and (max-width: 1220px){
 .card-img{
-    height: 355px;
+    /* height: 355px; */
 }
 .text-box {
     transform: translate(-10%, -95%);
