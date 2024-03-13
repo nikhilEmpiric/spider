@@ -255,6 +255,10 @@ body::before{
 .box-bg {
     max-width: 900px;
 }
+.card-name {
+    font-size: 18px;
+    font-weight: 500;
+}
 }
 
 @media screen and (max-width: 900px){
@@ -263,6 +267,11 @@ body::before{
     }
     .box-bg {
         max-width: 768px;
+    }
+    .card-name {
+        font-size: 16px;
+        bottom: 15px;
+        left: 15px;
     }
 }
 
@@ -368,10 +377,10 @@ body::before{
     .lets_text {
         font-size: 14px;
     }
-    .card-img img {
-        /* width: 155px; */
-        /* height: 155px; */
+    .card-name {
+        font-size: 14px;
     }
+
 }
 
 @media screen and (max-width: 430px) {
@@ -401,10 +410,37 @@ body::before{
         font-size: 22px;
         font-weight: 400;
     }
-}
-@media screen and (max-width: 380px){
-    .card-img img{
-        /* width: 128px; */
+    .card-img img {
+        /* min-height :165px; */
+        object-fit: cover;
+        object-position: 50%;
+    }
+    .card-img {
+        height: 99dvh;
+         padding-bottom: 20px;
+    }
+    .center_box{
+        padding: 0;
+        transform: translate(50%, 3%);
+        position: relative;
+        right: 50%;
+        top: 0%;
+    }
+    .box-bg{
+        border: none;
+        background-color: #000000;
+        padding: 20px 0px 0 0px;
     }
     
+}
+@media screen and (max-width: 380px){
+    .card-img img {
+        min-height :165px;
+    }
+    .card-name {
+        font-size: 12px;
+    }
+    .card-img img {
+        object-position: 80%;
+    }
 }
