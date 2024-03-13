@@ -416,8 +416,8 @@ body::before{
         object-position: 50%;
     }
     .card-img {
-        height: 80vh;
          padding-bottom: 20px;
+         height: 100%;
     }
     .center_box{
         padding: 0;
@@ -431,9 +431,10 @@ body::before{
         background-color: #000000;
         padding: 20px 0px 0 0px;
         border-radius: 0px;
-        height: 99dvh;
     }
-    
+    body::before {
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 380px){
     .card-img img {
