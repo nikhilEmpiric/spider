@@ -362,9 +362,10 @@ body::before{
     }
     .btn-three {
         margin: 20px auto;
-        display: block;
         border-bottom: 1px solid rgb(255 255 255 / 50%);
         width: fit-content;
+        display: flex;
+        gap: 40px;
     }
     .btn-three button {
         margin-bottom: 10px;
@@ -418,6 +419,7 @@ body::before{
     .card-img {
          padding-bottom: 20px;
          height: 100%;
+         max-height: 99dvh;
     }
     .center_box{
         padding: 0;
@@ -433,7 +435,17 @@ body::before{
         border-radius: 0px;
     }
     body::before {
-        opacity: 1;
+        opacity: 1 !important;
+    }
+    .text-button {
+        position: sticky;
+        top: 0;
+        z-index: 999999;
+    }
+    .btn-three{
+        position: sticky;
+        top: 35px;
+        z-index: 999999;
     }
 }
 @media screen and (max-width: 380px){
@@ -445,5 +457,8 @@ body::before{
     }
     .card-img img {
         object-position: 80%;
+    }
+    .btn-three {
+        gap: 20px;
     }
 }
