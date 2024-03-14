@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Start: main head -->
+
+<head>
+    <!-- Start: meta tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- End: meta tag -->
+    <!-- Start: Title -->
+    <title>solitaire game</title>
+    <!-- End: Title -->
+    <!-- Start: Link -->
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <!-- End: Link -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Start: Common CSS */
+        #text-same {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+
+        /* End: Common CSS */
+
+        /* Start: section-one */
+        #main {
+            background-image: url(./../img/home-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #section_one {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #box-main {
+            background-color: #FFFFFF0D;
+            border: 1px solid #FFFFFF0D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            cursor: pointer;
+            backdrop-filter: blur(80px);
+        }
+
+
+        #combo-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            justify-content: end;
+            width: 100%;
+        }
+
+        /* End: section-one */
+
+        /* Start: section-two */
+        #bg-main-play {
+            background-image: url(./../img/bg-play-btn.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+            height: 415px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .cal-main {
+            max-width: 100px;
+            width: 100%;
+            margin-bottom: 28px;
+        }
+
+        .title-card {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .month-date {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        #play-btn {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            background-color: #ffffff40;
+            max-width: 181px;
+            width: 100%;
+            padding: 14px 0px;
+            border-radius: 100px;
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        #new-game-btn {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.25);
+            max-width: 300px;
+            width: 100%;
+            padding: 14px 0px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 48px;
+            backdrop-filter: blur(80px);
+            cursor: pointer;
+        }
+
+        /* End: section-two */
+        /* Start: section-third */
+
+        #third-main-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 126px;
+            padding-bottom: 40px;
+        }
+
+        .icons-img {
+            max-width: 28px;
+            width: 100%;
+
+        }
+
+        .bg-icons {
+            background-color: #FFFFFF0D;
+            border-radius: 100%;
+            border: 1px solid #FFFFFF0D;
+            max-width: 70px;
+            min-width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(80px);
+        }
+
+        .home-main-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .home-main-wrapper p {
+            color: #9F9F9F;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .home-svg {
+            fill: #9F9F9F;
+        }
+
+        .home-svg:hover {
+            fill: #009F26;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .Wrapper-text:hover {
+            color: #009F26;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .home-main-wrapper:hover .Wrapper-text {
+            color: #009F26;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .home-main-wrapper:hover .home-svg {
+            fill: #009F26;
+            transition: all 0.7s ease-in-out;
+        }
+
+        /* End: section-third */
+    </style>
+</head>
+<!-- End: main head -->
+
+<body>
+    <!--? Start: main  -->
+    <div id="main">
+        <!--? Start: Section_one  -->
+        <div id="section_one">
+            <!--? Start: setting & themes  -->
+            <div id="combo-right">
+                <div id="box-main">
+                    <div class="icons-img">
+                        <img src="./img/GearSix.svg" alt="img">
+                    </div>
+                    <p id="text-same">Settings</p>
+                </div>
+                <div id="box-main">
+                    <div class="icons-img">
+                        <img src="./img/themes.svg" alt="img">
+                    </div>
+                    <p id="text-same">Themes</p>
+                </div>
+            </div>
+            <!--? End: setting & themes  -->
+
+        </div>
+        <!--? End: Section_one  -->
+
+        <!--? Start: Section_Two  -->
+        <div>
+            <div id="bg-main-play">
+                <div class="cal-main">
+                    <img src="./img/calender.svg" alt="img">
+                </div>
+                <p class="title-card">Daily Challenges</p>
+                <p class="month-date">January 31</p>
+                <button id="play-btn">Play</button>
+            </div>
+            <button id="new-game-btn">New Game</button>
+        </div>
+        <!--? End: Section_Two  -->
+        <!--? Start: Section_Three  -->
+        <div id="third-main-section">
+            <div class="home-main-wrapper">
+                <div class="bg-icons">
+                    <div class="icons-img">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.0785 12.1214C25.9462 12.3118 25.7437 12.4419 25.5155 12.4832C25.2874 12.5245 25.0521 12.4737 24.8614 12.3419L14.4839 5.15813C14.3372 5.05699 14.1633 5.00283 13.9851 5.00283C13.807 5.00283 13.6331 5.05699 13.4864 5.15813L3.13952 12.3419C2.94878 12.4699 2.71534 12.5178 2.4896 12.4752C2.26386 12.4326 2.06392 12.3029 1.93296 12.1142C1.802 11.9254 1.75052 11.6928 1.78964 11.4664C1.82875 11.24 1.95532 11.0381 2.14202 10.9043L12.4889 3.72051C12.9287 3.41756 13.45 3.2552 13.984 3.25488C14.518 3.25457 15.0395 3.41632 15.4796 3.71876L25.8571 10.9025C25.9518 10.9679 26.0327 11.0514 26.095 11.1481C26.1574 11.2448 26.2001 11.3528 26.2207 11.466C26.2412 11.5792 26.2393 11.6954 26.2149 11.8079C26.1905 11.9203 26.1441 12.0269 26.0785 12.1214ZM22.4595 12.0461L14.4865 6.71038C14.3426 6.61397 14.1733 6.56249 14 6.56249C13.8268 6.56249 13.6575 6.61397 13.5135 6.71038L5.54052 12.0461C5.1817 12.2857 4.88758 12.6101 4.68426 12.9907C4.48094 13.3712 4.37472 13.7961 4.37502 14.2275V21.875C4.37572 22.571 4.6525 23.2383 5.14464 23.7304C5.63677 24.2225 6.30404 24.4993 7.00002 24.5H10.5V19.25C10.5 18.5538 10.7766 17.8861 11.2689 17.3939C11.7612 16.9016 12.4288 16.625 13.125 16.625H14.875C15.5712 16.625 16.2389 16.9016 16.7312 17.3939C17.2235 17.8861 17.5 18.5538 17.5 19.25V24.5H21C21.696 24.4993 22.3633 24.2225 22.8554 23.7304C23.3475 23.2383 23.6243 22.571 23.625 21.875V14.2275C23.6253 13.7961 23.5191 13.3712 23.3158 12.9907C23.1125 12.6101 22.8183 12.2857 22.4595 12.0461ZM23.625 5.25001C23.625 4.78588 23.4406 4.34076 23.1125 4.01257C22.7843 3.68438 22.3392 3.50001 21.875 3.50001H21C20.695 3.50062 20.3955 3.58126 20.1314 3.73389C19.8673 3.88651 19.6478 4.10577 19.495 4.36976L23.625 7.22926V5.25001Z"
+                                class="home-svg" />
+                        </svg>
+
+                    </div>
+                </div>
+                <p class="Wrapper-text">Home</p>
+            </div>
+            <div class="home-main-wrapper">
+                <div class="bg-icons">
+                    <div class="icons-img">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_63_7562)">
+                                <mask id="mask0_63_7562" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="28" height="28">
+                                    <path d="M0 8.2016e-05H27.9999V28H0V8.2016e-05Z" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_63_7562)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.61718 5.46875C7.29394 5.46875 7.84765 4.91504 7.84765 4.23828V1.77735C7.84765 1.1006 7.29394 0.546889 6.61718 0.546889C5.94043 0.546889 5.38672 1.1006 5.38672 1.77735V4.23828C5.38672 4.91504 5.94043 5.46875 6.61718 5.46875Z"
+                                        class="home-svg" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.3086 4.23828C10.3086 4.91504 10.8623 5.46875 11.5391 5.46875C12.2158 5.46875 12.7695 4.91504 12.7695 4.23828V1.77735C12.7695 1.1006 12.2158 0.546889 11.5391 0.546889C10.8623 0.546889 10.3086 1.1006 10.3086 1.77735V3.00782V4.23828Z"
+                                        class="home-svg" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.2305 4.23828C15.2305 4.91504 15.7841 5.46875 16.4609 5.46875C17.1377 5.46875 17.6914 4.91504 17.6914 4.23828V1.77735C17.6914 1.1006 17.1377 0.546889 16.4609 0.546889C15.7841 0.546889 15.2305 1.1006 15.2305 1.77735V3.00782V4.23828Z"
+                                        class="home-svg" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M20.1523 3.00782V4.23828C20.1523 4.91504 20.706 5.46875 21.3828 5.46875C22.0596 5.46875 22.6133 4.91504 22.6133 4.23828V1.77735C22.6133 1.1006 22.0596 0.546889 21.3828 0.546889C20.706 0.546889 20.1523 1.1006 20.1523 1.77735V3.00782Z"
+                                        class="home-svg" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.82812 7.92963H24.1719C24.6182 7.92963 24.9922 8.30364 24.9922 8.74994V24.1719C24.9922 24.6181 24.6182 24.9922 24.1719 24.9922H3.82812C3.38187 24.9922 3.00781 24.6182 3.00781 24.1719V8.74994C3.00781 8.30364 3.38181 7.92963 3.82812 7.92963ZM21.3828 5.4687C20.706 5.4687 20.1523 4.91505 20.1523 4.23824V3.00777H17.6914V4.23824C17.6914 4.91505 17.1377 5.4687 16.4609 5.4687C15.7841 5.4687 15.2305 4.91505 15.2305 4.23824V3.00777H12.7695V4.23824C12.7695 4.91505 12.2158 5.4687 11.5391 5.4687C10.8623 5.4687 10.3086 4.91505 10.3086 4.23824V3.00777H7.84769V4.23824C7.84769 4.91505 7.29398 5.4687 6.61722 5.4687C5.94047 5.4687 5.38676 4.91505 5.38676 4.23824V3.00777H3.82812C2.02343 3.00777 0.546875 4.48433 0.546875 6.28901V24.1719C0.546875 25.9766 2.02354 27.4531 3.82812 27.4531H24.1719C25.9765 27.4531 27.4531 25.9765 27.4531 24.1719V6.28901C27.4531 4.48444 25.9766 3.00777 24.1719 3.00777H22.6133V4.23824C22.6133 4.91505 22.0596 5.4687 21.3828 5.4687Z"
+                                        class="home-svg" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.6138 14.5992L18.1959 15.0802C18.567 15.1487 18.6986 15.6007 18.4451 15.8607L16.6613 17.7043L17.002 20.3104C17.0514 20.6896 16.6486 20.9568 16.3204 20.7786L14.0333 19.6603L11.6577 20.7907C11.3256 20.9481 10.9443 20.6725 11.0002 20.2985L11.3589 17.7644L9.55225 15.8571C9.29451 15.5856 9.44823 15.141 9.80878 15.0784L12.3374 14.6351L13.5929 12.3276C13.7712 12.0002 14.2414 12.0088 14.4118 12.3331L15.6138 14.5992ZM24.1719 7.92963H3.82812C3.38182 7.92963 3.00781 8.30363 3.00781 8.74994V24.1719C3.00781 24.6182 3.38187 24.9922 3.82812 24.9922H24.1719C24.6181 24.9922 24.9922 24.6181 24.9922 24.1719V8.74994C24.9922 8.30363 24.6182 7.92963 24.1719 7.92963Z"
+                                        fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M15.6139 14.5992L14.4118 12.3331C14.2414 12.0088 13.7713 12.0003 13.593 12.3276L12.3374 14.6351L9.80886 15.0784C9.4483 15.141 9.29458 15.5857 9.55232 15.8572L11.359 17.7645L11.0003 20.2986C10.9443 20.6726 11.3257 20.9482 11.6578 20.7908L14.0334 19.6603L16.3205 20.7786C16.6487 20.9569 17.0515 20.6897 17.002 20.3105L16.6614 17.7044L18.4452 15.8608C18.6987 15.6008 18.567 15.1488 18.196 15.0803L15.6139 14.5992Z"
+                                        class="home-svg" />
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_63_7562">
+                                    <rect width="28" height="28" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+                </div>
+                <p class="Wrapper-text">Daily Challenges</p>
+            </div>
+        </div>
+        <!--? End: Section_Three  -->
+
+    </div>
+    <!--? End: main  -->
+
+    <!-- Start: Js links-->
+    <script src="./js/solitaire.js"></script>
+    <!-- End: Js links-->
+</body>
+
+</html>
