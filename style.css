@@ -121,11 +121,9 @@ body::before{
 .center_box{
     position: relative;
     padding: 20px;
-    /* display: flex;
     height: 100%;
-    width: 100%;
+    display: flex;
     align-items: center;
-    justify-content: center; */
 }
 .box-bg{
     max-width: 1212px;
@@ -159,6 +157,11 @@ body::before{
     position: absolute;
     right: 45px;
 }
+.don-btn :hover{
+    color: #000000;
+    background-color: #fff;
+
+}
 .btn-three {
     text-align: center;
     gap: 24px;
@@ -172,9 +175,15 @@ body::before{
 
 .btn-three button {
     padding: 16px 70px;
-    border: none;
     border-radius: 30px;
     background-color: #ffffff40;
+    border: 1px solid rgb(255 255 255 / 50%);
+    cursor: pointer;
+}
+.btn-three button:hover{
+    background-color: #009F26;
+    transition: 0.5s;
+    border: 1px solid #009F26;
 }
 .card-img img{
     height: 100%;
@@ -382,15 +391,13 @@ body::before{
     }
     .btn-three {
         margin: 20px auto;
-        border-bottom: 1px solid rgb(255 255 255 / 50%);
         width: fit-content;
         display: flex;
-        gap: 40px;
+        gap: 15px;
     }
     .btn-three button {
-        margin-bottom: 10px;
         background-color: unset;
-        padding: 10px 3px;
+        padding: 8px 15px;
     }
     .don-btn a {
         color: #009F26;
@@ -450,6 +457,7 @@ body::before{
         position: relative;
         right: 50%;
         top: 0%;
+        display: block;
     }
     .box-bg{
         border: none;
@@ -467,6 +475,31 @@ body::before{
         background-color: black;
         padding: 30px 0px 6px 0;
     }
+    .btn-three{
+        border-bottom: 1px solid rgb(255 255 255 / 50%);
+        gap: 30px;
+    }
+    .btn-three button{
+        border-bottom: 2px solid #000000;
+        border-radius: 0;
+        border-radius: 0;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        padding: 8px 5px;
+    }
+    .btn-three button:hover{
+        background-color: #000000 !important;
+        border-bottom: 2px solid #009F26;
+        border-radius: 0;
+        border-radius: 0;
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+    }
+    .btn-three button a:hover{
+        color: #009F26 !important;
+    }
 }
 @media screen and (max-width: 380px){
     .card-img img {
@@ -479,6 +512,6 @@ body::before{
         object-position: 80%;
     }
     .btn-three {
-        gap: 20px;
+        gap: 15px;
     }
 }
