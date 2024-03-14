@@ -2,16 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spider Solitaire</title>
-  <!-- google font  -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <!-- style link  -->
-  <link rel="stylesheet" href="./style.css">
-  <!-- js link  -->
-  <link rel="stylesheet" href="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Solitaire</title>
+    <!-- google font  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- style link  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- js link  -->
+
+    <style>
+        .popup {
+            display: none;
+            /* Initially hide the popup */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 
 </head>
 <style>
@@ -28,12 +43,13 @@
 </style>
 
 <body class="intro-bg">
-    <div class="center_box">
+    <button id="showPopup">Show Popup</button>
+    <div id="popup" class="center_box popup">
         <div class="box-bg">
             <div class="box-sticky">
                 <div class="text-button">
                     <p>Customization</p>
-                    <button class="don-btn"><a href="#">Done</a></button>
+                    <button class="don-btn" id="hidePopup"><a href="#">Done</a></button>
                 </div>
                 <div class="btn-three">
                     <button><a href="#">Background</a></button>
@@ -105,6 +121,15 @@
             </div>
         </div>
     </div>
+
+<!-- 
+    <button id="showPopup">Show Popup</button>
+    <div id="popup" class="popup">
+        <button id="hidePopup">Hide Popup</button>
+        <p>This is a popup!</p>
+    </div> -->
+
+    <script src="./solitaire.js"></script>
 </body>
 
 </html>

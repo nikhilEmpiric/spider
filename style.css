@@ -9,7 +9,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     font-family: "Montserrat";
 }
 .intro-bg{
@@ -27,7 +27,8 @@ a{
 .mt{
     margin-top: 25px;
 }
-.welcome_pop-up{
+
+.welcome_pop_up{
     width: 100%;
     max-width: 500px;
     border: 1px solid rgb(255 255 255 / 50%);
@@ -156,12 +157,13 @@ body::before{
     border:none ;
     position: absolute;
     right: 45px;
+    cursor: pointer;
 }
-.don-btn :hover{
+/* .don-btn :hover{
     color: #000000;
     background-color: #fff;
 
-}
+} */
 .btn-three {
     text-align: center;
     gap: 24px;
@@ -513,3 +515,10 @@ body::before{
         object-position: 80%;
     }
 }
+
+/* .popup {  
+    display: none; 
+    top: 50%;
+    left: 50%;   
+    transform: translate(-50%, -50%);
+} */
