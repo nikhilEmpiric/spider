@@ -390,13 +390,11 @@ body::before{
         right: 16px;
     }
     .btn-three {
-        margin: 20px auto;
-        width: fit-content;
-        display: flex;
-        gap: 15px;
+        margin: 20px 0px;
+
+        gap: 6px;
     }
-    .btn-three button {
-        background-color: unset;
+    .btn-three button { 
         padding: 8px 15px;
     }
     .don-btn a {
@@ -477,7 +475,9 @@ body::before{
     }
     .btn-three{
         border-bottom: 1px solid rgb(255 255 255 / 50%);
-        gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 10px;
     }
     .btn-three button{
         border-bottom: 2px solid #000000;
@@ -487,6 +487,7 @@ body::before{
         border-left: hidden;
         border-right: hidden;
         padding: 8px 5px;
+        background-color: black;
     }
     .btn-three button:hover{
         background-color: #000000 !important;
@@ -510,8 +511,5 @@ body::before{
     }
     .card-img img {
         object-position: 80%;
-    }
-    .btn-three {
-        gap: 15px;
     }
 }
