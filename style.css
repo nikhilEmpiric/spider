@@ -8,7 +8,7 @@ body{
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     font-family: "Montserrat";
 }
@@ -121,6 +121,11 @@ body::before{
 .center_box{
     position: relative;
     padding: 20px;
+    /* display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center; */
 }
 .box-bg{
     max-width: 1212px;
@@ -182,7 +187,7 @@ body::before{
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
     column-gap: 20px;
-    padding: 0px 20px;
+    padding: 0px 20px 20px 20px;
     margin-left: auto;
     margin-right: auto;
     height: 520px;
@@ -201,7 +206,6 @@ body::before{
     font-size: 20px;
     font-weight: 700;
 }
-
 
 
 @media screen and (max-width: 1620px){
@@ -268,6 +272,25 @@ body::before{
         font-size: 16px;
         bottom: 15px;
         left: 15px;
+    }
+    .center_box {
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}
+@media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {  
+ /* Your CSS styles for landscape orientation with a maximum width of 720px and a minimum width of 1200px */
+ .center_box {
+    overflow-y: scroll;
+    height: 100vh;
+}
+}
+/* Styles for devices in landscape orientation with a maximum width of 768px */
+@media (orientation: landscape) and (max-width: 915px) {
+    /* Your CSS styles for landscape orientation with a maximum width of 768px */
+    .center_box {
+        overflow-y: scroll;
+        height: 100vh;
     }
 }
 
