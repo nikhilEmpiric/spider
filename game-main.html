@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Start: main head -->
+
+<head>
+    <!-- Start: meta tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- End: meta tag -->
+    <!-- Start: Title -->
+    <title>solitaire game</title>
+    <!-- End: Title -->
+    <!-- Start: Link -->
+    <!-- style link  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- End: Link -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .popup {
+            display: none;
+        }
+
+        /* Start: Common CSS */
+        #text-same {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* End: Common CSS */
+
+        /* Start: section-one */
+        #main {
+            background-image: url(./../img/main-bg2x.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #section_one {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #box-main {
+            background-color: #ffffff0d;
+            border: 1px solid #ffffff0d;
+            /* max-width: max-content; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 6px;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+        }
+
+        .icons-img {
+            max-width: 28px;
+            width: 100%;
+        }
+
+        #reward-main {
+            display: none;
+            /* display: flex; */
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reward-img {
+            max-width: 44px;
+            width: 100%;
+        }
+
+        .reward-heading {
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+        }
+
+        #combo-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* End: section-one */
+        /* Start: section-Two */
+        #section_two {
+            display: none;
+            /* display: flex; */
+            gap: 80px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .section-sub-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            opacity: 0.6;
+        }
+
+        .section-heading-text {
+            font-size: 24px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .main-content-box {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        canvas {
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+        }
+
+        button {
+            color: #fff;
+            font-family: inherit;
+            font-weight: 500;
+            padding: 6px 12px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* End: section-Two */
+    </style>
+</head>
+<!-- End: main head -->
+
+<body>
+    <!--? Start: main  -->
+    <div id="main">
+        <!--? Start: Section_one  -->
+        <div id="section_one">
+
+            <!--? Start: back Option -->
+            <div id="box-main">
+                <div class="icons-img">
+                    <img src="./img/back.svg" alt="img">
+                </div>
+                <p id="text-same">Back</p>
+            </div>
+            <!--? End: back Option -->
+
+            <!--? Start: Reward points -->
+            <div id="reward-main">
+                <div class="reward-img ">
+                    <img src="./img/point_reward.svg" alt="img" class="">
+                </div>
+                <h1 class="reward-heading">4,366</h1>
+            </div>
+            <!--? End: Reward points -->
+
+            <!--? Start: setting & themes  -->
+            <div id="combo-right">
+                <div id="box-main">
+                    <div class="icons-img">
+                        <img src="./img/GearSix.svg" alt="img">
+                    </div>
+                    <p id="text-same">Settings</p>
+                </div>
+                <div id="box-main" class="showPopup">
+                    <div class="icons-img">
+                        <img src="./img/themes.svg" alt="img">
+                    </div>
+                    <p id="text-same">Themes</p>
+                </div>
+            </div>
+            <!--? End: setting & themes  -->
+
+        </div>
+        <!--? End: Section_one  -->
+        <div id="controls">
+            <!-- <button type="button" data-action="undo">Undo</button>
+            <button type="button" data-action="hint">Hint</button>
+            <button type="button" data-action="cheat">Force Win</button>
+            <button type="button" data-action="start">Restart</button> -->
+            <div id="score">Score: 0</div>
+        </div>
+        <div id="container"></div>
+        <!--? Start: Section_Two  -->
+        <div id="section_two">
+            <div class="main-content-box">
+                <p class="section-sub-heading">Stage</p>
+                <p class="section-heading-text">1</p>
+            </div>
+            <div class="main-content-box">
+                <p class="section-sub-heading">Time</p>
+                <p class="section-heading-text">02:05</p>
+            </div>
+            <div class="main-content-box">
+                <p class="section-sub-heading">Moves</p>
+                <p class="section-heading-text">6</p>
+            </div>
+            <div class="main-content-box">
+                <p class="section-sub-heading">All Time</p>
+                <p class="section-heading-text">1</p>
+            </div>
+
+        </div>
+        <!--? End: Section_Two  -->
+    </div>
+    <!--? End: main  -->
+    <!-- popup  -->
+    <div class="center_box popup" id="popup">
+        <!-- <button id="showPopup">Show Popup</button> -->
+        <div class="box-bg " >
+            <div class="box-sticky">
+                <div class="text-button">
+                    <p>Customization</p>
+                    <button class="don-btn" id="hidePopup"><a href="#">Done</a></button>
+                </div>
+                <div class="btn-three">
+                    <button><a href="#">Background</a></button>
+                    <button><a href="#">Card Face</a></button>
+                    <button><a href="#">Card Back</a></button>
+                </div>
+            </div>
+            <div class="card-img">
+                <div class="card-box">
+                    <img src="./img/classic-cloth.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/medieval.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/paradise_king.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/pirates.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/beach.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/bloom.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/forest.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/meadow.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/aquarium.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/forest.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/meadow.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/aquarium.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/forest.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/meadow.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+                <div class="card-box">
+                    <img src="./img/aquarium.png" alt="change">
+                    <p class="card-name">Classic Cloth</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./solitaire.js"></script>
+</body>
+
+</html>

@@ -12,6 +12,9 @@ body{
     /* width: 100vw; */
     font-family: "Montserrat";
 }
+.showPopup{
+    cursor: pointer;
+}
 .intro-bg{
     background-image:url(img/intro-image.png);
 }
@@ -120,11 +123,16 @@ body::before{
 
 /* ----------- /customization(background) ---------------------- */
 .center_box{
-    position: relative;
+    position: absolute;
+    top: 0px;
+    /* left: 0px; */
+    /* right: 0px; */
     padding: 20px;
     height: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: center;
 }
 .box-bg{
     max-width: 1212px;
@@ -453,11 +461,8 @@ body::before{
     }
     .center_box{
         padding: 0;
-        transform: translate(50%, 0%);
-        position: relative;
-        right: 50%;
-        top: 0%;
         display: block;
+        align-items: baseline;
     }
     .box-bg{
         border: none;
@@ -488,7 +493,7 @@ body::before{
         border-top: hidden;
         border-left: hidden;
         border-right: hidden;
-        padding: 8px 5px;
+        padding: 8px 0px;
         background-color: black;
     }
     .btn-three button:hover{
@@ -516,9 +521,3 @@ body::before{
     }
 }
 
-/* .popup {  
-    display: none; 
-    top: 50%;
-    left: 50%;   
-    transform: translate(-50%, -50%);
-} */
