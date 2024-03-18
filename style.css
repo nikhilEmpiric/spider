@@ -195,6 +195,9 @@ body::before{
     transition: 0.5s;
     border: 1px solid #009F26;
 }
+.btn-three .active{
+    background-color: #009F26;
+}
 .card-img img{
     height: 100%;
     width: 100%;
@@ -225,7 +228,9 @@ body::before{
     font-size: 20px;
     font-weight: 700;
 }
-
+/* .cardface_box{
+    display: none;
+} */
 
 @media screen and (max-width: 1620px){
     .king_img-bot img {
