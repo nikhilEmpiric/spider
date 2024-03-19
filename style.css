@@ -482,6 +482,7 @@ body::before{
         padding: 0;
         display: block;
         align-items: baseline;
+        background-color: black;
     }
     .box-bg{
         border: none;
