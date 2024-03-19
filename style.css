@@ -216,6 +216,9 @@ body::before{
     height: 520px;
     overflow-y: scroll;
 }
+.cardface_box{
+    gap: 40px;
+}
 .card-img::-webkit-scrollbar {
     display: none;
 }
@@ -230,10 +233,11 @@ body::before{
     border-radius: 15px;
     color: #fff;
     -webkit-backdrop-filter: blur(20px);
+    display: flex;
 }
 .card_face img{
-    margin-left: auto;
-    margin-right: auto;
+    object-fit: contain;
+    border-radius: 5px;
 }
 .card-name{
     position: absolute;
@@ -241,6 +245,11 @@ body::before{
     left: 24px;
     font-size: 20px;
     font-weight: 700;
+}
+.image_face_box{
+    max-width: 239px;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* .cardface_box{
     display: none;
@@ -276,6 +285,9 @@ body::before{
 @media screen and (max-width: 1220px){
 .card-img{
     /* height: 355px; */
+}
+.cardface_box {
+    gap: 25px;
 }
 .text-box {
     transform: translate(-10%, -95%);
@@ -314,6 +326,9 @@ body::before{
     .center_box {
         overflow-y: scroll;
         height: 100vh;
+    }
+    .image_face_box {
+        max-width: 170px;
     }
 }
 @media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {  
