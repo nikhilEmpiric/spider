@@ -197,10 +197,11 @@ body::before{
 }
 .btn-three .active{
     background-color: #009F26;
+    border: none;
 }
 .card-img img{
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     border-radius: 15px;
     object-fit: cover;
 }
@@ -220,6 +221,19 @@ body::before{
 }
 .card-box{
     position: relative;
+}
+.card_face{
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-color: #ffffff40;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 15px;
+    color: #fff;
+    -webkit-backdrop-filter: blur(20px);
+}
+.card_face img{
+    margin-left: auto;
+    margin-right: auto;
 }
 .card-name{
     position: absolute;
