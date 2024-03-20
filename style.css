@@ -365,7 +365,7 @@ body::before{
         font-size: 16px;
     }
     .btn-three button {
-        padding: 10px 25px;
+        padding: 10px 20px;
     }
     .card-img {
         grid-template-columns: repeat(2, 1fr);
@@ -543,13 +543,31 @@ body::before{
     .btn-three button a:hover{
         color: #009F26 !important;
     }
+    .image_face_box{
+        max-width: 165px;
+    }
+    .image_face_box img {
+    min-height: 165px;
+    object-fit: contain;
+    }
+    .btn-three .active{
+        background-color: #000000;
+    }
+    /* .image_face_box img{
+        width: 100px;
+        object-fit: contain;
+    } */
 }
 @media screen and (max-width: 380px){
+     .image_face_box img {
+    width:120px;
+    }
     .card-img img {
-        min-height :165px;
+        min-height :150px;
     }
     .card-name {
         font-size: 12px;
+            left: 10px;
     }
     .card-img img {
         object-position: 80%;
