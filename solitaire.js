@@ -62,3 +62,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the buttons and the popup
+    const showPopupButton = document.querySelector(".setting");
+    const hidePopupButton = document.getElementById("setting_hidePopup");
+    const setting_popup1 = document.getElementById("setting_popup");
+    const cardface_box1 = document.querySelector(".cardface_box");
+    const cardback1 = document.querySelector(".cardback");
+
+    // Show the popup when the "Show Popup" button is clicked
+    showPopupButton.addEventListener("click", function () {
+        setting_popup.style.display = "flex";
+        cardface_box1.style.display = "none";
+        cardback1.style.display = "none"
+        });
+ 
+    // Hide the popup when the "Hide Popup" button is clicked
+    hidePopupButton.addEventListener("click", function () {
+        setting_popup.style.display = "none";
+    });
+});
