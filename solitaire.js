@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
             bg.style.display = "none";
 
         });
-        
 });
 
 
@@ -108,6 +107,30 @@ document.addEventListener("DOMContentLoaded", function () {
         daily.classList.remove('active');
         events.setAttribute('class', 'active'); 
     });
+});
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the buttons and the popup
+    const start_welcom = document.getElementById("start_welcome");
+    const welcom = document.getElementById("welcome");
+    const start_welcome_popup = document.querySelector(".start_welcome_popup");
+    const accept = document.getElementById("accept");
+
+    // Show the popup when the "Show Popup" button is clicked
+    // start_welcom.addEventListener("click", function () {
+        // start_welcome_popup.style.display = "none";
+        // cardface_box1.style.display = "none";
+        
+        // });
+ 
+    // Hide the popup when the "Hide Popup" button is clicked
+    accept.addEventListener("click", function () {
+        start_welcome_popup.style.display = "none";
+        start_welcome.style.display = "block";
+    });
+
+    // welcom.addEventListener("click", function () {
+        // start_welcome_popup.style.display = "flex";
+    // });
 });

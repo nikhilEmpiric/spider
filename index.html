@@ -30,13 +30,12 @@
         top: 0;
         left: 0;
         opacity: 0.8;
-
     }
 </style>
 
 <body>
 
-    <!-- <div class="welcome_pop_up">
+    <div class="welcome_pop_up" id="start_welcome">
         <div class="mt">
             <p class="welcome_text">Welcome to Spider Solitaire!</p>
         </div>
@@ -48,36 +47,28 @@
         <a class="skip" href="Skip">
             <p>Skip</p>
         </a>
-        <button id="showPopup">Show Popup</button>
+        <!-- <button id="showPopup">Show Popup</button>
         <div id="popup" class="popup">
             <button id="hidePopup">Hide Popup</button>
             <p>This is a popup!</p>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
 
-    <div class="center_box " id="">
-        <div class="box-bg " >
-            <div class="box-sticky">
-                <div class="text-button">
-                    <p>Awards</p>
-                    <button class="don-btn" id="hidePopup"><a href="#">Done</a></button>
-                </div>
+    <div class="center_box start_welcome_popup" id="welcome">
+        <div class="box-welcome">
+            <div class="welcome_box">
+                <p class="hedging">Welcome</p>
+                <p class="second_text">Please read and accept our <samp>Terms and Privacy Policy</samp> which set out the terms 
+                    of use of our app and explain how we collect, use and process your information, 
+                    the privacy rights available to you and instructions on how you can exercise such 
+                    privacy rights, otherwise <samp>see the options</samp> available to you
+                </p>
                 <div class="btn-three bcc_button">
-                    <button  id="daily"><a href="#">Daily</a></button>
-                    <button  id="events"><a href="#">Events</a></button>
-                </div>
-            </div>
-            <div class="month_year_ehod">
-                <div class="event_box">
-                    <img src="img/events_image.png" alt="">
-                    <p class="text_1">You have no awards yet</p>
-                    <p class="text_2">Take part in event and collect unique rewards. Stay tuned!</p>
+                    <button  id="accept"><a href="#">Accept</a></button>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     <script src="./solitaire.js"></script>
 </body>

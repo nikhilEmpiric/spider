@@ -28,7 +28,7 @@ a{
     color: #fff;
 }
 .mt{
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 .welcome_pop_up{
@@ -43,6 +43,9 @@ a{
     transform: translate(-50%, -50%);
     background-color: #ffffff40;
 }
+.welcome_pop_up {
+    display: none;
+}
 .welcome_text{
     text-align: center;
     color: #fff;
@@ -51,6 +54,7 @@ a{
     max-width: 380px;
     margin: auto;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 .img_king{
     width: 250px;
@@ -60,7 +64,8 @@ a{
 }
 .lets_text{
     color: #fff;
-    font-size: 20px;
+    font-size: 19px;
+    line-height: 25px;
     margin: auto;
     text-align: center;
     width: 100%;
@@ -68,7 +73,7 @@ a{
 }
 .lets_mt{
     margin-top: 16px;
-    margin-bottom: 46px;
+    margin-bottom: 40px;
 }
 .start_btn{
     color: #fff;
@@ -81,15 +86,17 @@ a{
     text-align: center;
     display: block;
     margin: auto;
+    cursor: pointer;
 }
 .skip{
-    text-decoration: none   ;
+    text-decoration: none ;
     font-size: 24px;
     color: #009f26;
     text-align: center;
     font-weight: 600;
     display: block;
-    margin: 25px 0;
+    margin: 25px auto;
+    max-width: max-content;
 }
 body::before{
     position: relative;
@@ -355,6 +362,51 @@ width: 20px;
     text-align: center;
 }
 
+.welcome_box {
+   text-align: center;
+}
+.hedging{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+.second_text{
+    font-size: 20px;
+    line-height: 30px;
+}
+.second_text samp{
+    color: #009f26;
+}
+.box-welcome {
+    max-width: 775px;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-color: #ffffff40;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    padding: 40px 50px 0 50px;
+    position: relative;
+    -webkit-backdrop-filter: blur(20px);
+}
+.tutorial_pop_up {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff40;
+    padding-bottom: 45px;
+}
+
+
+/* ======================================================== */
 
 @media screen and (max-width: 1620px){
     .king_img-bot img {
@@ -434,6 +486,9 @@ width: 20px;
     .image_face_box {
         max-width: 170px;
     }
+    .hedging{
+        margin-bottom: 25px;
+    }
 }
 @media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {  
  /* Your CSS styles for landscape orientation with a maximum width of 720px and a minimum width of 1200px */
@@ -485,6 +540,13 @@ width: 20px;
     .btn-three {
     margin: 30px 20px;
     }
+    .hedging {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .second_text {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 667px){
@@ -523,6 +585,9 @@ width: 20px;
     }
     .card-img {
         padding: 0 30px;
+    }
+    .box-welcome {
+        padding: 30px 30px 0 30px;
     }
 }
 @media screen and (max-width: 580px){
@@ -691,6 +756,28 @@ width: 20px;
     }
     .btn-three button a {
     font-size: 14px;
+    }
+    .box-welcome{
+        border: none;
+        background-color: #000000;
+        padding: 30px 20px 0 20px;
+        border-radius: 0px;
+    }
+    .welcome_box .btn-three{
+        border: none;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .welcome_box .btn-three #accept{
+        max-width: none;
+        border: none;
+        
+    }
+    .welcome_box .btn-three button a {
+        font-size: 16px;
+    }
+    .second_text {
+        font-size: 16px;
+        line-height: 27px;
     }
 }
 @media screen and (max-width: 380px){
