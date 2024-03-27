@@ -5,7 +5,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-image:url(img/spider_bg-img.png);
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -100,6 +100,18 @@ a{
 }
 body::before{
     position: relative;
+}
+body::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: -1;
 }
 .king_img-bot{
     position: absolute;
@@ -404,6 +416,94 @@ width: 20px;
     background-color: #ffffff40;
     padding-bottom: 45px;
 }
+
+.all_time_new_score{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    padding-top: 40px;
+    color: #fff;
+}
+.new_score_box p{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.icons_score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 50px 0;
+    gap: 12px;
+}
+.icons_score p{
+    font-size: 40px;
+    font-weight: 700;
+}
+.score_img_ss{
+    border-radius: 20px;
+    max-width: 470px;
+    height: 250px;
+    overflow: hidden;
+    border: 9px solid #fff;
+}
+.score_img_ss img{
+    width: 100%;
+    height: 100%;
+    
+}
+.score_box{
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    background-color: #ffffff40;
+    padding: 24px;
+    margin-top: 16px;
+}
+.best_score_box {
+    margin-top: 50px;
+}
+.text_bs{
+    font-size: 24px;
+    font-weight: 700;
+}
+.box_t_w_m_at{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+.score_box .text_t_w_m_at{
+    font-size: 20px;
+    font-weight: 600;
+}
+.score_nabar{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.score_nabar .nabar_box{
+    padding: 6px 8px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 5px;
+    backdrop-filter: blur(80px);
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+.score_nabar .nabar{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
 
 
 /* ======================================================== */
