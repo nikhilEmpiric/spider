@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     // Get references to the buttons and the popup
     const showPopup = document.querySelector(".setting");
@@ -112,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     // Get references to the buttons and the popup
     // let start_welcom = document.getElementById("start_welcome");
@@ -121,11 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let accept = document.getElementById("accept");
 
     // Show the popup when the "Show Popup" button is clicked
-    // start_welcom.addEventListener("click", function () {
-    //     // start_welcome_popup.style.display = "none";
-    //     // cardface_box1.style.display = "none";
-    //     console.log("jbcy")
-    // });
 
     // Hide the popup when the "Hide Popup" button is clicked
     if (accept) {
@@ -137,11 +130,5 @@ document.addEventListener("DOMContentLoaded", function () {
             // start_welcome_popup.style.display = "flex";
         });
     }
-    // accept.addEventListener("click", function () {
-    //     start_welcome_popup.style.display = "none";
-    //     start_welcome.style.display = "block";
-    // });
-    // welcom.addEventListener("click", function () {
-    //     // start_welcome_popup.style.display = "flex";
-    // });
+  
 });
