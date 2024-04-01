@@ -181,7 +181,7 @@ body::before {
     padding: 14px 38px;
     border-radius: 30px;
     background-color: #009F26;
-    font-size: 19px;
+    font-size: 16px;
     border:none ;
     position: absolute;
     right: 45px;
@@ -249,8 +249,8 @@ body::before {
 }
 .card_face{
     width: 100%;
-    backdrop-filter: blur(20px);
-    background-color: #ffffff40;
+    backdrop-filter: blur(80px);
+    background-color: rgb(255 255 255 / 10%);
     border: 1px solid rgb(255 255 255 / 50%);
     border-radius: 15px;
     color: #fff;
@@ -571,6 +571,65 @@ width: 20px;
     font-weight: 600;
     margin: 18px 0 35px 0;
 }
+.number_of_suits{
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    background-color: #ffffff40;
+    padding: 20px 20px 0 20px;
+    color: #fff;
+}
+.number_don-btn {
+    padding: 14px 38px;
+    border-radius: 30px;
+    background-color: #009F26;
+    font-size: 16px;
+    border: none;
+}
+.icon_text-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.number_of_suits .choosing_text{
+    padding: 28px 0 20px 0;
+    max-width: 500px;
+}
+.ttt_text {
+    padding: 20px 0 35px 0;
+    font-weight: 500;
+}
+.box_n_o_s {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px 24px;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+}
+.box_n_o_s img{
+    width: 18px;
+    display: none;
+}
+.box_n_o_ms p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================================== */
 
@@ -602,35 +661,38 @@ width: 20px;
 }
 
 @media screen and (max-width: 1220px){
-.card-img{
-    /* height: 355px; */
-}
-.cardface_box {
-    gap: 25px;
-}
-.text-box {
-    transform: translate(-10%, -95%);
-}
-.card-img img{
-    /* width: 270px; */
-}
-.don-btn {
-    padding: 10px 30px;
+    .card-img{
+        /* height: 355px; */
+    }
+    .cardface_box {
+        gap: 25px;
+    }
+    .text-box {
+        transform: translate(-10%, -95%);
+    }
+    .card-img img{
+        /* width: 270px; */
+    }
+    .don-btn {
+        padding: 10px 30px;
 
-}
-.btn-three button {
-    padding: 12px 48px;
-}
-.box-bg {
-    max-width: 900px;
-}
-.card-name {
-    font-size: 18px;
-    font-weight: 500;
-}
-.month_awards_box {
-    grid-template-columns: repeat(4, 1fr);
-}
+    }
+    .btn-three button {
+        padding: 12px 48px;
+    }
+    .box-bg {
+        max-width: 900px;
+    }
+    .card-name {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .month_awards_box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .number_don-btn{
+        padding: 10px 30px;
+    }
 }
 
 @media screen and (max-width: 900px){
@@ -657,11 +719,11 @@ width: 20px;
     }
 }
 @media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {  
- /* Your CSS styles for landscape orientation with a maximum width of 720px and a minimum width of 1200px */
- .center_box {
-    overflow-y: scroll;
-    height: 100vh;
-}
+    /* Your CSS styles for landscape orientation with a maximum width of 720px and a minimum width of 1200px */
+    .center_box {
+        overflow-y: scroll;
+        height: 100vh;
+    }
 }
 /* Styles for devices in landscape orientation with a maximum width of 768px */
 @media (orientation: landscape) and (max-width: 915px) {
@@ -817,17 +879,17 @@ width: 20px;
 }
 
 @media screen and (max-width: 490px) {
-.text-box {
-    max-width: 276px;
-}
-.btn-three {
-    gap: 10px;
-}
-.score_img_ss {
-    margin-right: 20px;
-    margin-left: 20px;
-    width: -webkit-fill-available;
-}
+    .text-box {
+        max-width: 276px;
+    }
+    .btn-three {
+        gap: 10px;
+    }
+    .score_img_ss {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: -webkit-fill-available;
+    }
 }
 @media screen and (max-width: 470px){
     .don-btn {
@@ -1005,6 +1067,39 @@ width: 20px;
     }
     .congratulations_box{
         justify-content: space-around;
+    }
+    .all_time_new_score .new_game {
+        font-size: 16px;
+    }
+    .number_of_suits {
+        border: none;
+        border-radius: 20px;
+        backdrop-filter: none;
+        background-color: black;
+        padding: 20px 20px 0 20px;
+        color: #fff;
+        position: unset;
+        transform: none;
+        height: inherit;
+    }
+    .number_don-btn a{
+        color: #009F26;
+    }
+    .number_don-btn{
+        background-color: unset;
+        padding: 0;
+    }
+    .number_of_suits .choosing_text {
+        font-size: 14px;
+    }
+    .ttt_text {
+        font-size: 14px;
+    }
+    .icon_text-button img {
+        width: 22px;
+    }
+    .icon_text-button p{
+        font-size: 18px;
     }
 }
 @media screen and (max-width: 380px){
