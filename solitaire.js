@@ -131,78 +131,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// const arr = [
-//     { title:"1 suit" , profile:"img/Check.svg" },
-//     { title:"2 Suit" , profile:"img/Check.svg" },
-//     { title:"4 Suit" , profile:"img/Check.svg" }
-// ]
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Get references to the buttons and the popup
-//   const box_n_o_s = document.querySelector(".box_n_o_s");
-//   const suit_conut = document.getElementById("suit_conut");
-// //   const two = document.querySelector(".two");
-// //   const three = document.querySelector(".three");
-//   const one_suit = document.getElementById("one_suit");
-// //   const two_suit = document.getElementById("two_suit");
-// //   const three_suit = document.getElementById("three_suit");
-
-//   // Set default display for "1 Suit"
-// //   one_suit.style.display = "block";
-
-//   // Add event listeners to the suit buttons
-//   arr.forEach((el) => {
-//     console.log("button",el.title);
-//     suit_conut.textContent=el.title;
-//     one_suit.style.
-
-//     // button.addEventListener("click", function () {
-
-//     //   // Hide all suit options
-//     // //   [one_suit, two_suit, three_suit].forEach((suit) => {
-//     // //     suit.style.display = "none";
-//     // //     console.log("124554");
-//     // //   });
-
-//     //   // Show only the corresponding suit option
-//     // //   if (this === box_n_o_s) {
-//     // //     one_suit.style.display = "block";
-//     // //   } else if (this === two) {
-//     // //     two_suit.style.display = "block";
-//     // //   } else if (this === three) {
-//     // //     three_suit.style.display = "block";
-//     // //   }
-//     // });
-//   });
-// });
 
 const arr = [
   {
     title: "1 suit",
     profile: "img/Check.svg",
-    desc: "Choosing the number of suits is only available in the standard game mode",
+    desc: "The game starts with one suit. An easier way to play.",
   },
   {
     title: "2 Suit",
     profile: "img/Check.svg",
-    desc: "The game starts with one suit. An easier way to play.",
+    desc: "The game starts with two suits. A more challenging way to play, winning happens more rarely.",
   },
   {
     title: "4 Suit",
     profile: "img/Check.svg",
-    desc: "The game starts with two suits. A more challenging way to play, winning happens more rarely.",
-  },
-  {
-    desc:"The game starts with Four suits. This mode is for experienced players."
+    desc: "The game starts with Four suits. This mode is for experienced players.",
   },
 ];
-
 document.addEventListener("DOMContentLoaded", function () {
   // Get reference to the container where rows will be added
   const container = document.querySelector(".container");
 
   // Set the default index for the selected suit
   let selectedIndex = 0;
+  
+  // Create a heading paragraph tag
+  const headingParagraph = document.createElement("p");
+  headingParagraph.textContent = "Choosing the number of suits is only available in the standard game mode";
+  container.appendChild(headingParagraph);
 
   // Loop through the array and create a row for each item
   arr.forEach((el, index) => {
@@ -219,29 +176,61 @@ document.addEventListener("DOMContentLoaded", function () {
     image.src = el.profile;
     image.alt = "Image";
 
-    // Hide the image if it's not the default selected suit
-    if (index !== selectedIndex) {
-      image.style.display = "none";
-    }
-
     // Add click event listener to each title
-    titleParagraph.addEventListener("click", () => {
-      // Hide the currently displayed image
-      const currentImage = container.querySelector("img");
-      currentImage.style.display = "none";
+    row.addEventListener("click", () => {
+      // Hide all images
+      container.querySelectorAll("img").forEach((img, idx) => {
+        if (idx === index) {
+          img.style.display = "block";
+        } else {
+          img.style.display = "none";
+        }
+      });
 
       // Update the selected index
       selectedIndex = index;
-
-      // Show the image for the selected suit
-      image.style.display = "block";
     });
 
     // Append title and image to the row
     row.appendChild(titleParagraph);
     row.appendChild(image);
 
-    // Append the row to the container
-    container.appendChild(row);
+    // Hide all images except the default selected suit
+    if (index !== selectedIndex) {
+      image.style.display = "none";
+    }
+
+    // Create a wrapper div and append the row to it
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("wrapper");
+    wrapper.appendChild(row);
+
+    // Create a subparagraph p element and set its text content
+    const subparagraph = document.createElement("p");
+    subparagraph.textContent = el.desc;
+    wrapper.appendChild(subparagraph);
+
+    // Add styles to the wrapper div
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.rowGap = " 20px";
+    wrapper.style.marginBottom = "30px";
+
+    // Append the wrapper to the container
+    container.appendChild(wrapper);
   });
 });
+
+
+
+// Creating an array of objects
+const arrayOfObjects = [
+  { name: 'John',
+   profile: "img/Check.svg",
+   name: 'Bob', },
+];
+
+// Accessing elements of the array
+console.log(arrayOfObjects[0]); // Output: { name: 'John', age: 30 }
+// console.log(arrayOfObjects[1].name); // Output: 'Alice'
+// console.log(arrayOfObjects[2].age); // Output: 35

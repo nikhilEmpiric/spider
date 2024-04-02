@@ -588,20 +588,20 @@ width: 20px;
     font-size: 16px;
     border: none;
 }
-.icon_text-button {
+.number_of_suits .icon_text-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.number_of_suits .choosing_text{
+.number_of_suits .container p:first-child{
     padding: 28px 0 20px 0;
     max-width: 500px;
 }
-.ttt_text {
-    padding: 20px 0 35px 0;
-    font-weight: 500;
+.number_of_suits .container .wrapper p:nth-child(1){
+    padding: 0px 0 0px 0;
 }
-.box_n_o_s {
+
+.number_of_suits .container .wrapper .row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -610,21 +610,11 @@ width: 20px;
     padding: 15px 24px;
     background-color: rgba(255, 255, 255, 0.25);
     cursor: pointer;
+    height: 55px;
 }
-.box_n_o_s img{
-    width: 18px;
-    display: none;
+.number_of_suits .container .wrapper .row img{
+    width: 22px;
 }
-.box_n_o_ms p{
-    font-size: 20px;
-    font-weight: 500;
-}
-
-
-
-
-
-
 
 
 
@@ -810,6 +800,12 @@ width: 20px;
     .manthli_score_text p {
         font-size: 20px;
     }
+    .number_of_suits .icon_text-button img {
+        width: 26px;
+    }
+    .number_of_suits{
+        max-width: 650px;
+    }
 }
 
 @media screen and (max-width: 667px){
@@ -852,6 +848,20 @@ width: 20px;
     .box-welcome {
         padding: 30px 30px 0 30px;
     }
+    .number_of_suits {
+        max-width: 520px;
+    }
+
+    .number_of_suits .container p:first-child {
+        padding: 20px 0 15px 0;
+        font-size: 14px;
+    }
+    .wrapper p {
+        font-size: 14px;
+    }
+    .number_of_suits .container .wrapper .row {
+        height: 48px;
+    }
 }
 @media screen and (max-width: 580px){
     .card-img img {
@@ -875,6 +885,15 @@ width: 20px;
         margin-right: 20px;
         margin-left: 20px;
         width: -webkit-fill-available;
+    }
+    .number_of_suits {
+        max-width: 460px;
+    }
+    .icon_text-button p{
+        font-size: 22px;
+    }
+    .icon_text-button img {
+        width: 22px;
     }
 }
 
@@ -916,6 +935,13 @@ width: 20px;
     }
     .card-img {
         padding: 0 20px;
+    }
+    .number_of_suits {
+        max-width: 420px;
+    }
+    .icon_text-button .number_don-btn{
+        padding: 8px 24px;
+        font-size: 14px;
     }
 
 }
@@ -1085,7 +1111,7 @@ width: 20px;
     .number_don-btn a{
         color: #009F26;
     }
-    .number_don-btn{
+    .icon_text-button .number_don-btn{
         background-color: unset;
         padding: 0;
     }
@@ -1095,8 +1121,8 @@ width: 20px;
     .ttt_text {
         font-size: 14px;
     }
-    .icon_text-button img {
-        width: 22px;
+    .number_of_suits .icon_text-button img {
+        width: 20px;
     }
     .icon_text-button p{
         font-size: 18px;
