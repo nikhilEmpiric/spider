@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 const arr = [
   {
     title: "1 suit",
@@ -155,11 +154,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the default index for the selected suit
   let selectedIndex = 0;
-  
+
   // Create a heading paragraph tag
   const headingParagraph = document.createElement("p");
-  headingParagraph.textContent = "Choosing the number of suits is only available in the standard game mode";
-  container.appendChild(headingParagraph);
+  headingParagraph.textContent =
+    "Choosing the number of suits is only available in the standard game mode";
+
+    if(container){
+      container.appendChild(headingParagraph);
+    }  
 
   // Loop through the array and create a row for each item
   arr.forEach((el, index) => {
@@ -217,20 +220,198 @@ document.addEventListener("DOMContentLoaded", function () {
     wrapper.style.marginBottom = "30px";
 
     // Append the wrapper to the container
-    container.appendChild(wrapper);
+    if(container){
+      container.appendChild(wrapper);
+    } 
+    
   });
 });
 
 
-
-// Creating an array of objects
-const arrayOfObjects = [
-  { name: 'John',
-   profile: "img/Check.svg",
-   name: 'Bob', },
+// ==========================background card===============================================//
+const cardbgData = [
+  {
+    cardname: "Classic Cloth",
+    cardimg: "./img/classic-cloth.png",
+  },
+  {
+    cardname: "Medieval",
+    cardimg: "./img/medieval.png",
+  },
+  {
+    cardname: "Paradise",
+    cardimg: "./img/paradise_king.png",
+  },
+  {
+    cardname: "Pirates",
+    cardimg: "./img/pirates.png",
+  },
+  {
+    cardname: "Beach",
+    cardimg: "./img/beach.png",
+  },
+  {
+    cardname: "Bloom",
+    cardimg: "./img/bloom.png",
+  },
+  {
+    cardname: "Forest",
+    cardimg: "./img/forest.png",
+  },
+  {
+    cardname: "Meadow",
+    cardimg: "./img/meadow.png",
+  },
+  {
+    cardname: "Aquarium",
+    cardimg: "./img/aquarium.png",
+  },
+  {
+    cardname: "Bloom",
+    cardimg: "./img/bloom.png",
+  },
+  {
+    cardname: "Medieval",
+    cardimg: "./img/medieval.png",
+  },
+  {
+    cardname: "Pirates",
+    cardimg: "./img/pirates.png",
+  },
+  {
+    cardname: "Beach",
+    cardimg: "./img/beach.png",
+  },
+  {
+    cardname: "Medieval",
+    cardimg: "./img/medieval.png",
+  },
+  {
+    cardname: "Bloom",
+    cardimg: "./img/bloom.png",
+  },
 ];
 
-// Accessing elements of the array
-console.log(arrayOfObjects[0]); // Output: { name: 'John', age: 30 }
-// console.log(arrayOfObjects[1].name); // Output: 'Alice'
-// console.log(arrayOfObjects[2].age); // Output: 35
+const postcontainer = document.querySelector(".card-img");
+
+const postMethods = () => {
+  cardbgData.map((postData) => {
+    const postElement = document.createElement("div");
+    postElement.classList.add("card-box");
+    postElement.innerHTML = `
+    <img src="${postData.cardimg}" alt="change">
+    <p class="card-name">${postData.cardname}</p>
+    `;
+    if(postcontainer){
+      postcontainer.appendChild(postElement);
+    } 
+   
+  });
+};
+
+postMethods();
+
+// ==========================Card Face===============================================//
+
+const cardfaceData = [
+  {
+    cardimg: "img/card_k9.png",
+  },
+  {
+    cardimg: "img/k9_bleck.png",
+  },
+  {
+    cardimg: "img/k9_blue.png",
+  },
+  {
+    cardimg: "img/k9_bleck.bg.png",
+  },
+  {
+    cardimg: "img/k9_red.bleck.png",
+  },
+  {
+    cardimg: "img/k9_red.png",
+  },
+  // Add more objects as needed
+];
+
+const cardFaceContainer = document.querySelector(".cardface_box");
+
+const faceDataCardImages = () => {
+  cardfaceData.forEach((postData) => {
+    const cardFaceElement = document.createElement("div"); // Renamed to cardFaceElement
+    cardFaceElement.classList.add("card_face");
+
+    // Create one more <div> element
+    const additionalDiv = document.createElement("div");
+    additionalDiv.classList.add("image_face_box");
+    additionalDiv.innerHTML = `
+      <img src="${postData.cardimg}" alt="change">
+    `;
+    // Append the additional div to the cardFaceElement
+    if (cardFaceElement){
+      cardFaceElement.appendChild(additionalDiv);
+    }
+
+    if (cardFaceContainer) {
+      cardFaceContainer.appendChild(cardFaceElement);
+    } 
+  });
+};
+
+faceDataCardImages();
+
+// ==========================Card Back ===============================================// 
+
+const cardbackData = [
+  {
+    cardimg: "img/classic-cloth_bg.png",
+  },
+  {
+    cardimg: "img/medieval_bg.png",
+  },
+  {
+    cardimg: "img/paradise_king_bg.png",
+  },
+  {
+    cardimg: "img/forest_bg.png",
+  },
+  {
+    cardimg: "img/meadow_bg.png",
+  },
+  {
+    cardimg: "img/pirates_bg.png",
+  },
+  // Add more objects as needed
+];
+
+const cardBackContainer = document.querySelector(".cardback");
+
+const backDateCardImages = () => {
+  cardbackData.forEach((postData) => {
+    const cardBackElement = document.createElement("div"); // Renamed to cardElement
+    cardBackElement.classList.add("card_face");
+
+    // Create one more <div> element
+    const cardImageContainer = document.createElement("div"); // Renamed to imageBox
+    cardImageContainer.classList.add("image_face_box");
+    cardImageContainer.innerHTML = `
+      <img src="${postData.cardimg}" alt="change">
+    `;
+    // Append the additional div to the cardFaceElement
+    if (cardBackElement){
+      cardBackElement.appendChild(cardImageContainer);
+    }
+
+    if (cardBackContainer) {
+      cardBackContainer.appendChild(cardBackElement);
+    } 
+  });
+};
+
+backDateCardImages();
+
+
+
+
+

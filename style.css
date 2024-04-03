@@ -260,6 +260,7 @@ body::before {
 .card_face img{
     object-fit: contain;
     border-radius: 5px;
+    padding: 25px 0;
 }
 .card-name{
     position: absolute;
@@ -985,7 +986,7 @@ width: 20px;
     }
     .center_box{
         padding: 0;
-        display: block;
+        /* display: block; */
         align-items: baseline;
         background-color: black;
     }
@@ -1126,6 +1127,9 @@ width: 20px;
     }
     .icon_text-button p{
         font-size: 18px;
+    }
+    .card_face {
+        background-color: rgb(255 255 255 / 25%);
     }
 }
 @media screen and (max-width: 380px){
