@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let welcom = document.getElementById("welcome");
   let start_welcome_popup = document.querySelector(".start_welcome_popup");
   let accept = document.getElementById("accept");
+  let home = document.getElementById("home");
 
   // Show the popup when the "Show Popup" button is clicked
 
@@ -123,10 +124,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (accept) {
     accept.addEventListener("click", function () {
       start_welcome_popup.style.display = "none";
-      start_welcome.style.display = "block";
+      // start_welcome.style.display = "block";
+      setTimeout(() => { home.style.display = "flex"; } , 1000);
+      
     });
     welcom.addEventListener("click", function () {
-      // start_welcome_popup.style.display = "flex";
+      // start_welcome_popup.style.display = "block";
     });
   }
 });
@@ -411,7 +414,26 @@ const backDateCardImages = () => {
 
 backDateCardImages();
 
+// ========================== Settings ===============================================// 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get references to the buttons and the popup
+  let showPopupNumbersuits = document.getElementById("number_of_suits");
+  let setting = document.getElementById("setting");
+  let number_of_suits = document.querySelector(".number_of_suits");
+  let ravshellPopup = document.getElementById("ravshellPopup");
+  // Show the popup when the "Show Popup" button is clicked.\
 
-
-
+  if (showPopupNumbersuits) {
+    showPopupNumbersuits.addEventListener("click", function () {
+      number_of_suits.style.display = "block";
+      setting.style.display = "none";
+      // console.log("15");
+    });
+    // Hide the popup when the "Hide Popup" button is clicked
+    ravshellPopup.addEventListener("click", function () {
+      number_of_suits.style.display = "none";
+      setting.style.display = "block";
+    });
+  }
+});
 

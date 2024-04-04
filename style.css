@@ -1,10 +1,11 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0px;
     padding: 0px;
-    background-image:url(img/spider_bg-img.png);
+    background-image: url(img/spider_bg-img.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,26 +13,32 @@ body{
     /* width: 100vw; */
     font-family: "Montserrat";
 }
-.showPopup{
+
+.showPopup {
     cursor: pointer;
 }
-.intro-bg{
-    background-image:url(img/intro-image.png);
+
+.intro-bg {
+    background-image: url(img/intro-image.png);
 }
 
-p, a, div {
+p,
+a,
+div {
     padding: 0px;
     margin: 0px;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
 }
-.mt{
+
+.mt {
     margin-top: 45px;
 }
 
-.welcome_pop_up{
+.welcome_pop_up {
     width: 100%;
     max-width: 500px;
     border: 1px solid rgb(255 255 255 / 50%);
@@ -43,10 +50,12 @@ a{
     transform: translate(-50%, -50%);
     background-color: #ffffff40;
 }
+
 .welcome_pop_up {
     display: none;
 }
-.welcome_text{
+
+.welcome_text {
     text-align: center;
     color: #fff;
     font-size: 32px;
@@ -56,13 +65,15 @@ a{
     font-weight: 600;
     margin-bottom: 20px;
 }
-.img_king{
+
+.img_king {
     width: 250px;
     height: 250px;
     margin: auto;
     display: block;
 }
-.lets_text{
+
+.lets_text {
     color: #fff;
     font-size: 19px;
     line-height: 25px;
@@ -71,11 +82,13 @@ a{
     width: 100%;
     max-width: 380px;
 }
-.lets_mt{
+
+.lets_mt {
     margin-top: 16px;
     margin-bottom: 40px;
 }
-.start_btn{
+
+.start_btn {
     color: #fff;
     font-size: 20px;
     background-color: #009F26;
@@ -88,8 +101,9 @@ a{
     margin: auto;
     cursor: pointer;
 }
-.skip{
-    text-decoration: none ;
+
+.skip {
+    text-decoration: none;
     font-size: 24px;
     color: #009f26;
     text-align: center;
@@ -98,9 +112,11 @@ a{
     margin: 25px auto;
     max-width: max-content;
 }
-body::before{
+
+body::before {
     position: relative;
 }
+
 body::before {
     content: "";
     display: block;
@@ -113,13 +129,15 @@ body::before {
     opacity: 0.8;
     z-index: -1;
 }
-.king_img-bot{
+
+.king_img-bot {
     position: absolute;
     bottom: 0px;
     left: 23%;
 }
+
 /* --------------how to play (page)---------------------------- */
-.text-box{
+.text-box {
     color: #fff;
     border: 1px solid rgb(255 255 255 / 50%);
     width: fit-content;
@@ -136,12 +154,13 @@ body::before {
     font-weight: 400;
     font-size: 20px;
 }
-.king_img-bot img{
+
+.king_img-bot img {
     width: 420px;
 }
 
 /* ----------- /customization(background) ---------------------- */
-.center_box{
+.center_box {
     position: absolute;
     top: 0px;
     /* left: 0px; */
@@ -152,8 +171,10 @@ body::before {
     width: 100%;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
 }
-.box-bg{
+
+.box-bg {
     max-width: 1212px;
     width: 100%;
     backdrop-filter: blur(20px);
@@ -168,25 +189,29 @@ body::before {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(80px);
 }
-.text-button{
+
+.text-button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.text-button p{
+
+.text-button p {
     font-size: 32px;
     font-weight: 700;
 }
+
 .don-btn {
     padding: 14px 38px;
     border-radius: 30px;
     background-color: #009F26;
     font-size: 16px;
-    border:none ;
+    border: none;
     position: absolute;
     right: 45px;
     cursor: pointer;
 }
+
 /* .don-btn :hover{
     color: #000000;
     background-color: #fff;
@@ -199,7 +224,8 @@ body::before {
     justify-content: center;
     margin: 40px 20px;
 }
-.btn-three button a{
+
+.btn-three button a {
     font-size: 16px;
 }
 
@@ -212,22 +238,26 @@ body::before {
     max-width: 254px;
     width: 100%;
 }
-.btn-three button:hover{
+
+.btn-three button:hover {
     background-color: #009F26;
     transition: 0.5s;
     border: 1px solid #009F26;
 }
-.btn-three .active{
+
+.btn-three .active {
     background-color: #009F26;
     border: none;
 }
-.card-img img{
+
+.card-img img {
     height: 100%;
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
 }
-.card-img{
+
+.card-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
@@ -238,16 +268,20 @@ body::before {
     height: 520px;
     overflow-y: scroll;
 }
-.cardface_box{
+
+.cardface_box {
     gap: 40px;
 }
+
 .card-img::-webkit-scrollbar {
     display: none;
 }
-.card-box{
+
+.card-box {
     position: relative;
 }
-.card_face{
+
+.card_face {
     width: 100%;
     backdrop-filter: blur(80px);
     background-color: rgb(255 255 255 / 10%);
@@ -257,59 +291,70 @@ body::before {
     -webkit-backdrop-filter: blur(20px);
     display: flex;
 }
-.card_face img{
+
+.card_face img {
     object-fit: contain;
     border-radius: 5px;
     padding: 25px 0;
 }
-.card-name{
+
+.card-name {
     position: absolute;
     bottom: 24px;
     left: 24px;
     font-size: 20px;
     font-weight: 700;
 }
-.image_face_box{
+
+.image_face_box {
     max-width: 239px;
     margin-left: auto;
     margin-right: auto;
 }
+
 /* .cardface_box{
     display: none;
 } */
 
-.setting{
+.setting {
     cursor: pointer;
 }
-.setting_popup{
+
+.setting_popup {
     display: none;
 }
+
 ::-webkit-scrollbar {
-  width: 1px;
+    width: 1px;
 }
-.month_year_ehod{
+
+.month_year_ehod {
     padding: 0 40px 0 40px;
     height: 520px;
     overflow-y: scroll;
 }
-.year p{
+
+.year p {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 12px;
 }
-.month_awards_box{
+
+.month_awards_box {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     row-gap: 20px;
     column-gap: 20px;
     margin-bottom: 40px;
 }
+
 .award_box {
     margin-left: auto;
     margin-right: auto;
     padding: 15px 0;
 }
-.awards_box{
+
+.awards_box {
     width: 100%;
     backdrop-filter: blur(20px);
     border: 1px solid rgb(255 255 255 / 50%);
@@ -318,80 +363,94 @@ body::before {
     -webkit-backdrop-filter: blur(20px);
     display: flex;
 }
-.award_box img{
+
+.award_box img {
     margin-bottom: 16px;
     height: auto;
 }
+
 .award_box p {
     text-align: center;
     font-weight: 500;
 }
-.line{
+
+.line {
     border-radius: 15px;
     margin: 16px 0;
     background-color: rgba(255, 255, 255, 0.2);
     height: 3px;
 }
-.line::after{
+
+.line::after {
     content: '';
-position: absolute;
-background-color: #009F26;
-height: 3px;
-width: 20px;
+    position: absolute;
+    background-color: #009F26;
+    height: 3px;
+    width: 20px;
 
 }
-.award_box .day{
+
+.award_box .day {
     font-size: 14px;
     color: hsla(0, 0%, 100%, 0.6);
     letter-spacing: 1px;
 }
 
-.monthli_level{
+.monthli_level {
     opacity: 20%;
 }
-.event_box{
+
+.event_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 100px 0 0 0;
 }
-.event_box img{
+
+.event_box img {
     margin: auto;
 }
-.event_box p{
+
+.event_box p {
     align-items: center;
     justify-content: center;
     display: flex;
 }
-.text_1{
+
+.text_1 {
     font-size: 20px;
     font-weight: 500;
     margin: 20px 0 0 0;
     text-align: center;
 }
-.text_2{
-    color:  rgba(255, 255, 255, 0.6);
+
+.text_2 {
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 500;
     margin: 12px 0 0 0;
     text-align: center;
 }
 
 .welcome_box {
-   text-align: center;
+    text-align: center;
 }
-.hedging{
+
+.hedging {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 35px;
 }
-.second_text{
+
+.second_text {
     font-size: 20px;
     line-height: 30px;
 }
-.second_text span{
+
+.second_text span {
     color: #009f26;
     font-family: "Montserrat";
 }
+
 .box-welcome {
     max-width: 685px;
     width: 100%;
@@ -407,6 +466,7 @@ width: 20px;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(80px);
 }
+
 .tutorial_pop_up {
     width: 100%;
     max-width: 500px;
@@ -421,7 +481,7 @@ width: 20px;
     padding-bottom: 45px;
 }
 
-.all_time_new_score{
+.all_time_new_score {
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -435,38 +495,45 @@ width: 20px;
     width: 100%;
     height: 100%;
 }
-.new_score_box p{
+
+.new_score_box p {
     font-size: 28px;
     font-weight: 600;
     text-align: center;
 }
-.icons_score{
+
+.icons_score {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px 0 35px 0;
     gap: 12px;
 }
-.icons_score p{
+
+.icons_score p {
     font-size: 30px;
     font-weight: 600;
 }
+
 .icons_score img {
     width: 36px;
 }
-.score_img_ss{
+
+.score_img_ss {
     border-radius: 20px;
     max-width: 430px;
     height: 240px;
     overflow: hidden;
     border: 9px solid #fff;
 }
-.score_img_ss img{
+
+.score_img_ss img {
     width: 100%;
     height: 100%;
-    
+
 }
-.score_box{
+
+.score_box {
     width: 100%;
     max-width: 500px;
     border: 1px solid rgb(255 255 255 / 50%);
@@ -475,6 +542,7 @@ width: 20px;
     background-color: #ffffff40;
     padding: 20px;
 }
+
 .best_score_box {
     margin-top: 35px;
     width: 100%;
@@ -482,13 +550,15 @@ width: 20px;
     flex-direction: column;
     align-items: center;
 }
-.text_bs{
+
+.text_bs {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 15px;
     text-align: left;
 }
-.box_t_w_m_at{
+
+.box_t_w_m_at {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -496,23 +566,27 @@ width: 20px;
     padding-bottom: 10px;
     margin-bottom: 12px;
 }
-.box_t_w_m_ati{
+
+.box_t_w_m_ati {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
 }
-.score_box .text_t_w_m_at{
+
+.score_box .text_t_w_m_at {
     font-size: 18px;
     font-weight: 600;
 }
-.score_nabar{
+
+.score_nabar {
     display: flex;
     gap: 12px;
     align-items: center;
 }
-.score_nabar .nabar_box{
+
+.score_nabar .nabar_box {
     padding: 5px 7px;
     border: 1px solid rgb(255 255 255 / 50%);
     border-radius: 5px;
@@ -524,10 +598,12 @@ width: 20px;
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
 }
-.score_nabar .nabar{
+
+.score_nabar .nabar {
     font-size: 17px;
     font-weight: 600;
 }
+
 .all_time_new_score .new_game {
     color: #fff;
     font-size: 20px;
@@ -541,6 +617,7 @@ width: 20px;
     cursor: pointer;
     margin: 35px auto 20px auto;
 }
+
 .main {
     text-align: center;
     font-size: 20px;
@@ -552,27 +629,31 @@ width: 20px;
     max-width: 250px;
     height: 250px;
     width: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(-25deg, #F0B507, #FFDA17);
 }
-.smtb_box{
+
+.smtb_box {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.smtb_box img{
+
+.smtb_box img {
     width: 28px;
 }
-.manthli_score_text p{
+
+.manthli_score_text p {
     max-width: 445px;
     width: 100%;
     font-size: 20px;
     font-weight: 600;
     margin: 18px 0 35px 0;
 }
-.number_of_suits{
+
+.number_of_suits {
     width: 100%;
     max-width: 700px;
     border: 1px solid rgb(255 255 255 / 50%);
@@ -582,23 +663,28 @@ width: 20px;
     padding: 20px 20px 0 20px;
     color: #fff;
 }
+
 .number_don-btn {
     padding: 14px 38px;
     border-radius: 30px;
     background-color: #009F26;
     font-size: 16px;
     border: none;
+    cursor: pointer;
 }
+
 .number_of_suits .icon_text-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.number_of_suits .container p:first-child{
+
+.number_of_suits .container p:first-child {
     padding: 28px 0 20px 0;
     max-width: 500px;
 }
-.number_of_suits .container .wrapper p:nth-child(1){
+
+.number_of_suits .container .wrapper p:nth-child(1) {
     padding: 0px 0 0px 0;
 }
 
@@ -613,111 +699,229 @@ width: 20px;
     cursor: pointer;
     height: 55px;
 }
-.number_of_suits .container .wrapper .row img{
+
+.number_of_suits .container .wrapper .row img {
     width: 22px;
 }
 
+#setting {
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    background-color: #ffffff40;
+    padding: 20px 20px 0 20px;
+    color: #fff;
+}
+#setting .text-button {
+    margin-bottom: 40px;
+}
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #009F26;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #009F26;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#setting .slnhhar_container .slnhhar_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px 24px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+#setting .slnhhar_container .slnhhar_box img{
+    width: 30px;
+    transform: rotate(180deg);
+}
+.number_of_suits {
+    display: none;
+}
+.number_of_suits .icon_text-button img{
+    cursor: pointer;
+}
 
 
 
 
 /* ======================================================== */
 
-@media screen and (max-width: 1620px){
+@media screen and (max-width: 1620px) {
     .king_img-bot img {
         width: 355px;
     }
-    .text-box{
+
+    .text-box {
         font-size: 17px;
     }
 }
+
 @media screen and (max-width: 1480px) {
     .king_img-bot {
         left: 15%;
     }
+
     .text-box {
         padding: 16px 16px;
         left: 45%;
     }
 }
-@media screen and (max-width: 1320px){
+
+@media screen and (max-width: 1320px) {
     .king_img-bot img {
         width: 300px;
     }
-    .text-box { 
+
+    .text-box {
         max-width: 360px;
         left: 40%;
     }
 }
 
-@media screen and (max-width: 1220px){
-    .card-img{
+@media screen and (max-width: 1220px) {
+    .card-img {
         /* height: 355px; */
     }
+
     .cardface_box {
         gap: 25px;
     }
+
     .text-box {
         transform: translate(-10%, -95%);
     }
-    .card-img img{
+
+    .card-img img {
         /* width: 270px; */
     }
+
     .don-btn {
         padding: 10px 30px;
 
     }
+
     .btn-three button {
         padding: 12px 48px;
     }
+
     .box-bg {
         max-width: 900px;
     }
+
     .card-name {
         font-size: 18px;
         font-weight: 500;
     }
+
     .month_awards_box {
         grid-template-columns: repeat(4, 1fr);
     }
-    .number_don-btn{
+
+    .number_don-btn {
         padding: 10px 30px;
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
     .card-img img {
         /* width: 218px; */
     }
+
     .box-bg {
         max-width: 768px;
     }
+
     .card-name {
         font-size: 16px;
         bottom: 15px;
         left: 15px;
     }
+
     .center_box {
         overflow-y: scroll;
         height: 100vh;
     }
+
     .image_face_box {
         max-width: 170px;
     }
-    .hedging{
+
+    .hedging {
         margin-bottom: 25px;
     }
 }
-@media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {  
+
+@media (orientation: landscape) and (max-width: 720px) and (min-width: 1200px) {
+
     /* Your CSS styles for landscape orientation with a maximum width of 720px and a minimum width of 1200px */
     .center_box {
         overflow-y: scroll;
         height: 100vh;
     }
 }
+
 /* Styles for devices in landscape orientation with a maximum width of 768px */
 @media (orientation: landscape) and (max-width: 915px) {
+
     /* Your CSS styles for landscape orientation with a maximum width of 768px */
     .center_box {
         overflow-y: scroll;
@@ -731,124 +935,157 @@ width: 20px;
         max-width: 440px;
         bottom: 27%;
     }
+
     .king_img-bot {
         left: 5%;
     }
+
     .text-button p {
         font-size: 28px;
         font-weight: 500;
     }
+
     .don-btn {
         padding: 8px 16px;
         font-size: 16px;
     }
+
     .btn-three button {
         padding: 10px 20px;
     }
+
     .card-img {
         grid-template-columns: repeat(2, 1fr);
         padding: 0 60px;
     }
+
     .month_awards_box {
-    grid-template-columns: repeat(3, 1fr);
-     margin-bottom: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 25px;
     }
+
     .month_year_ehod {
-    padding: 0 25px 0 25px;
+        padding: 0 25px 0 25px;
     }
+
     .btn-three {
-    margin: 30px 20px;
+        margin: 30px 20px;
     }
+
     .hedging {
         font-size: 28px;
         font-weight: 500;
     }
+
     .second_text {
         font-size: 18px;
     }
+
     .new_score_box p {
         font-size: 24px;
     }
+
     .icons_score img {
         width: 30px;
     }
+
     .icons_score {
         margin: 15px 0 30px 0;
     }
+
     .best_score_box {
         margin-top: 30px;
     }
+
     .score_box {
         padding: 16px;
     }
+
     .score_box .text_t_w_m_at {
         font-size: 16px;
         font-weight: 500;
     }
+
     .score_nabar .nabar {
         font-size: 16px;
         font-weight: 500;
     }
+
     .all_time_new_score .new_game {
         padding: 12px 60px;
         margin: 30px auto 15px auto;
         font-size: 18px;
     }
+
     .main {
         font-size: 18px;
         font-weight: 500;
     }
+
     .manthli_score_text p {
         font-size: 20px;
     }
+
     .number_of_suits .icon_text-button img {
         width: 26px;
     }
-    .number_of_suits{
+
+    .number_of_suits {
         max-width: 650px;
     }
 }
 
-@media screen and (max-width: 667px){
-    .welcome_pop-up{
+@media screen and (max-width: 667px) {
+    .welcome_pop-up {
         max-width: 398px;
     }
-    .welcome_text{
+
+    .welcome_text {
         font-size: 24px;
         max-width: 270px;
         font-weight: 400;
     }
+
     .img_king {
         width: 212px;
         height: 212px;
     }
+
     .lets_text {
         font-size: 16px;
         max-width: 270px;
     }
+
     .start_btn {
         font-size: 16px;
         padding: 10px 85px;
     }
+
     .skip {
         font-size: 20px;
         margin-top: 20px;
     }
+
     .lets_mt {
         margin-bottom: 25px;
     }
+
     .don-btn {
         right: 30px;
     }
+
     .btn-three {
         gap: 18px;
     }
+
     .card-img {
         padding: 0 30px;
     }
+
     .box-welcome {
         padding: 30px 30px 0 30px;
     }
+
     .number_of_suits {
         max-width: 520px;
     }
@@ -857,42 +1094,53 @@ width: 20px;
         padding: 20px 0 15px 0;
         font-size: 14px;
     }
+
     .wrapper p {
         font-size: 14px;
     }
+
     .number_of_suits .container .wrapper .row {
         height: 48px;
     }
 }
-@media screen and (max-width: 580px){
+
+@media screen and (max-width: 580px) {
     .card-img img {
         /* width: 200px; */
     }
-    .card-img{
-        row-gap: 12px; 
+
+    .card-img {
+        row-gap: 12px;
         column-gap: 12px;
     }
+
     .month_year_ehod {
-    padding: 0 20px 0 20px;
+        padding: 0 20px 0 20px;
     }
-    .month_awards_box{
+
+    .month_awards_box {
         row-gap: 12px;
-       column-gap: 12px 
+        column-gap: 12px
     }
+
     .btn-three button {
-    padding: 8px 15px;
+        padding: 8px 15px;
     }
+
     .score_box {
         margin-right: 20px;
         margin-left: 20px;
         width: -webkit-fill-available;
     }
+
     .number_of_suits {
         max-width: 460px;
     }
-    .icon_text-button p{
+
+    .icon_text-button p {
         font-size: 22px;
     }
+
     .icon_text-button img {
         width: 22px;
     }
@@ -902,45 +1150,56 @@ width: 20px;
     .text-box {
         max-width: 276px;
     }
+
     .btn-three {
         gap: 10px;
     }
+
     .score_img_ss {
         margin-right: 20px;
         margin-left: 20px;
         width: -webkit-fill-available;
     }
 }
-@media screen and (max-width: 470px){
+
+@media screen and (max-width: 470px) {
     .don-btn {
         font-size: 16px;
         background-color: unset;
         padding: unset;
         right: 16px;
     }
+
     .btn-three {
         margin: 20px 10px;
         gap: 6px;
     }
-    .btn-three button { 
+
+    .btn-three button {
         padding: 8px 12px;
     }
+
     .don-btn a {
         color: #009F26;
     }
+
     .lets_text {
         font-size: 14px;
     }
+
     .card-name {
         font-size: 14px;
     }
+
     .card-img {
         padding: 0 20px;
     }
+
     .number_of_suits {
         max-width: 420px;
     }
-    .icon_text-button .number_don-btn{
+
+    .icon_text-button .number_don-btn {
         padding: 8px 24px;
         font-size: 14px;
     }
@@ -951,54 +1210,66 @@ width: 20px;
     .welcome_pop-up {
         max-width: 298px;
     }
+
     .welcome_text {
         font-size: 18px;
         max-width: 180px;
     }
+
     .img_king {
         width: 184px;
         height: 184px;
     }
+
     .lets_mt {
         font-size: 15px;
         margin-bottom: 20px;
     }
+
     .start_btn {
         padding: 8px 55px;
     }
+
     .skip {
         margin-top: 15px;
         font-size: 18px;
     }
+
     .text-button p {
         font-size: 22px;
         font-weight: 400;
     }
+
     .card-img img {
         /* min-height :165px; */
         object-fit: cover;
         object-position: 50%;
     }
+
     .card-img {
-         padding-bottom: 20px;
-         height: 100%;
-         /* max-height: 100dvh; */
+        padding-bottom: 20px;
+        height: 100%;
+        /* max-height: 100dvh; */
     }
-    .center_box{
+
+    .center_box {
         padding: 0;
         /* display: block; */
         align-items: baseline;
         background-color: black;
     }
-    .box-bg{
+
+    .box-bg {
         border: none;
         background-color: #000000;
         padding: 0px 0px 0 0px;
         border-radius: 0px;
     }
+
     body::before {
         opacity: 1 !important;
     }
+
     .box-sticky {
         position: sticky;
         top: 0;
@@ -1006,13 +1277,15 @@ width: 20px;
         background-color: black;
         padding: 30px 0px 6px 0;
     }
-    .btn-three{
+
+    .btn-three {
         border-bottom: 1px solid rgb(255 255 255 / 50%);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 20px 10px;
     }
-    .btn-three button{
+
+    .btn-three button {
         border-bottom: 2px solid #000000;
         border-radius: 0;
         border-radius: 0;
@@ -1022,7 +1295,8 @@ width: 20px;
         padding: 8px 0px;
         background-color: black;
     }
-    .btn-three button:hover{
+
+    .btn-three button:hover {
         background-color: #000000 !important;
         border-bottom: 2px solid #009F26;
         border-radius: 0;
@@ -1031,73 +1305,92 @@ width: 20px;
         border-left: hidden;
         border-right: hidden;
     }
-    .btn-three button a:hover{
+
+    .btn-three button a:hover {
         color: #009F26 !important;
     }
-    .image_face_box{
+
+    .image_face_box {
         max-width: 165px;
     }
+
     .image_face_box img {
-    min-height: 165px;
-    object-fit: contain;
+        min-height: 165px;
+        object-fit: contain;
     }
-    .btn-three .active{
+
+    .btn-three .active {
         background-color: #000000;
     }
+
     /* .image_face_box img{
         width: 100px;
         object-fit: contain;
     } */
     .awards_box {
-    background-color: #ffffff40;
+        background-color: #ffffff40;
     }
-    .month_year_ehod{
+
+    .month_year_ehod {
         height: 100%;
     }
+
     .btn-three button a {
-    font-size: 14px;
+        font-size: 14px;
     }
-    .box-welcome{
+
+    .box-welcome {
         border: none;
         background-color: #000000;
         padding: 30px 20px 0 20px;
         border-radius: 0px;
     }
-    .welcome_box .btn-three{
+
+    .welcome_box .btn-three {
         border: none;
         grid-template-columns: repeat(1, 1fr);
     }
-    .welcome_box .btn-three #accept{
+
+    .welcome_box .btn-three #accept {
         max-width: none;
         border: none;
-        
+
     }
+
     .welcome_box .btn-three button a {
         font-size: 16px;
     }
+
     .second_text {
         font-size: 16px;
         line-height: 27px;
     }
+
     .score_img_ss {
         height: 220px;
     }
+
     .manthli_score_text p {
         font-size: 16px;
     }
+
     .star_img_box {
         max-width: 160px;
         height: 160px;
     }
-    .star_img_box img{
+
+    .star_img_box img {
         width: 84px;
     }
-    .congratulations_box{
+
+    .congratulations_box {
         justify-content: space-around;
     }
+
     .all_time_new_score .new_game {
         font-size: 16px;
     }
+
     .number_of_suits {
         border: none;
         border-radius: 20px;
@@ -1109,45 +1402,56 @@ width: 20px;
         transform: none;
         height: inherit;
     }
-    .number_don-btn a{
+
+    .number_don-btn a {
         color: #009F26;
     }
-    .icon_text-button .number_don-btn{
+
+    .icon_text-button .number_don-btn {
         background-color: unset;
         padding: 0;
     }
+
     .number_of_suits .choosing_text {
         font-size: 14px;
     }
+
     .ttt_text {
         font-size: 14px;
     }
+
     .number_of_suits .icon_text-button img {
         width: 20px;
     }
-    .icon_text-button p{
+
+    .icon_text-button p {
         font-size: 18px;
     }
+
     .card_face {
         background-color: rgb(255 255 255 / 25%);
     }
 }
-@media screen and (max-width: 380px){
-     .image_face_box img {
-    width:120px;
+
+@media screen and (max-width: 380px) {
+    .image_face_box img {
+        width: 120px;
     }
+
     .card-img img {
-        min-height :150px;
+        min-height: 150px;
     }
+
     .card-name {
         font-size: 12px;
-            left: 10px;
+        left: 10px;
     }
+
     .card-img img {
         object-position: 80%;
     }
-    .month_awards_box {
-    grid-template-columns: repeat(2, 1fr);
-   }
-}
 
+    .month_awards_box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
