@@ -230,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // ==========================background card===============================================//
 const cardbgData = [
   {
