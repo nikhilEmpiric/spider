@@ -88,6 +88,7 @@
             border-radius: 5px;
             cursor: pointer;
             backdrop-filter: blur(80px);
+            cursor: pointer;
         }
 
         #combo-right {
@@ -250,13 +251,13 @@
         <div id="section_one">
             <!--? Start: setting & themes  -->
             <div id="combo-right">
-                <div id="box-main">
+                <div id="box-main" class="setting">
                     <div class="icons-img">
                         <img src="./img/GearSix.svg" alt="img" />
                     </div>
                     <p id="text-same">Settings</p>
                 </div>
-                <div id="box-main" id="showPopup">
+                <div id="box-main" class="showPopup">
                     <div class="icons-img">
                         <img src="./img/themes.svg" alt="img" />
                     </div>
@@ -341,7 +342,7 @@
             <!--? End: Section_Three  -->
         </div>
         <!--? End: Section_Two  -->
-
+        <!-- ------------------Welcome------------------------------ -->
         <div class="center_box start_welcome_popup" id="welcome">
             <div class="box-welcome">
                 <div class="welcome_box">
@@ -360,6 +361,83 @@
                 </div>
             </div>
         </div>
+        <!-- ---------------End---Welcome------------------------------ -->
+        <!-- ---------------Start--Settings------------------------------ -->
+        <div class="tutorial_pop_up " id="setting">
+            <div class="icon_text-button text-button">
+                <p>Settings</p>
+                <button class="don-btn" id="ravshellSetting"><a href="#">Done</a></button>
+            </div>
+            <div class="slnhhar_container">
+                <div class="slnhhar_box">
+                    <p>Sounds</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="slnhhar_box">
+                    <p>Left Hand Mode</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="slnhhar_box" id="number_of_suits">
+                    <p>Number of Suits</p>
+                    <p id="numbersuits"></p>
+                    <img src="img/arro_left_icon.png" alt="img">
+                </div>
+                <div class="slnhhar_box">
+                    <p>How to Play</p>
+                    <img src="img/arro_left_icon.png" alt="img">
+                </div>
+                <div class="slnhhar_box">
+                    <p>Help</p>
+                    <img src="img/arro_left_icon.png" alt="img">
+                </div>
+                <div class="slnhhar_box">
+                    <p>About Game</p>
+                    <img src="img/arro_left_icon.png" alt="img">
+                </div>
+                <div class="slnhhar_box">
+                    <p>Remove Ads</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="tutorial_pop_up number_of_suits">
+            <div class="icon_text-button text-button">
+                <img src="img/arro_left_icon.png" alt="img">
+                <p>Number of Suits</p>
+                <button class="number_don-btn" id="ravshellPopup"><a href="#">Done</a></button>
+            </div>
+            <div class="container"></div>
+        </div>
+        <!--? End: Settings  -->
+        <!-- popup Background -->
+        <div class="center_box popup" id="popup" style="display: none;">
+            <div class="box-bg ">
+                <div class="box-sticky">
+                    <div class="text-button">
+                        <p>Customization</p>
+                        <button class="don-btn" id="hidePopup"><a href="#">Done</a></button>
+                    </div>
+                    <div class="btn-three bcc_button">
+                        <button id="background"><a href="#">Background</a></button>
+                        <button id="card_face"><a href="#">Card Face</a></button>
+                        <button id="card_back"><a href="#">Card Back</a></button>
+                    </div>
+                </div>
+                <!-- Background  -->
+                <div class="card-img " id="bgcard"></div>
+                <!-- popup Card Face -->
+                <div class="card-img cardface_box " id="cardface"></div>
+                <!-- Card Back -->
+                <div class="card-img cardback " id="cardback"></div>
+            </div>
+        </div>
+
     </div>
 
     <!--? End: main  -->

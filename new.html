@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Navbar Styles */
+        header {
+            overflow: hidden;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 1rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                right: 0;
+                height: 92vh;
+                top: 8vh;
+                background-color: #333;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                width: 0;
+                overflow: hidden;
+            }
+
+            .nav-links li {
+                opacity: 0;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        .nav-active {
+            transform: translateX(0%);
+            width: 50%;
+            transition: transform 0.8s ease-in;
+            overflow: hidden;
+        }
+
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .banner {
+            display: flex;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .banner-part1 {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .banner-part2 {
+            flex: 1;
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .banner-heading {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .banner-subheading {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Logo</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="banner-part1">
+            <h1 class="banner-heading"></h1>
+            <p class="banner-subheading"></p>
+        </div>
+        <div class="banner-part2">
+            <img src="img/welcome-king.png" alt="">
+            <!-- Add your desired content for the second part here -->
+        </div>
+    </div>
+
+
+    <script>
+        const headingElement = document.querySelector('.banner-heading');
+        const subheadingElement = document.querySelector('.banner-subheading');
+
+        const headings = ['Discover the Extraordinary', 'Unleash Your Potential', 'Embrace the Future'];
+        const subheadings = ['Explore our innovative solutions', 'Unlock new opportunities', 'Experience the difference'];
+
+        function updateBannerText() {
+            const randomIndex = Math.floor(Math.random() * headings.length);
+            headingElement.textContent = headings[randomIndex];
+            subheadingElement.textContent = subheadings[randomIndex];
+        }
+
+        updateBannerText();
+        setInterval(updateBannerText, 5000); // Change the banner text every 5 seconds
+
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', () => {
+            // Toggle the nav-active class on the nav-links
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+
+            // Toggle the 'toggle' class on the burger icon
+            burger.classList.toggle('toggle');
+
+            // Fade in the nav-links
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

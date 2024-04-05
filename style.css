@@ -320,7 +320,7 @@ body::before {
     cursor: pointer;
 }
 
-.setting_popup {
+.awards_popup {
     display: none;
 }
 
@@ -713,6 +713,7 @@ body::before {
     background-color: #ffffff40;
     padding: 20px 20px 0 20px;
     color: #fff;
+    display: none;
 }
 #setting .text-button {
     margin-bottom: 40px;
@@ -798,6 +799,7 @@ input:checked+.slider:before {
 }
 .number_of_suits .icon_text-button img{
     cursor: pointer;
+    width: auto;
 }
 
 

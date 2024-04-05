@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Example</title>
+    <!-- Linking the CSS file -->
+    <style>
+        /* CSS to style the box */
+        .box {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+        .boxContainer {
+            display: flex;
+            /* Use flexbox to arrange boxes horizontally */
+            flex-wrap: wrap;
+            /* Wrap boxes to next line when they reach container's width */
+        }
+
+        .boxItem {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            margin: 10px;
+            /* Margin between boxes */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box"> <!-- Creating a div with class "box" -->
+            Click me to create 10 boxes!
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("container");
+            const box = document.querySelector(".box");
+
+            box.addEventListener("click", function () {
+                for (let i = 0; i < 10; i++) {
+                    
+                    const newBox = document.createElement("div");
+                    newBox.classList.add("boxItem");
+                    newBox.textContent = "Box " + (i + 1);
+                    container.appendChild(newBox);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

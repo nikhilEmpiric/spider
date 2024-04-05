@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get references to the buttons and the popup
-  const showPopup = document.querySelector(".setting");
+  const showPopup = document.querySelector(".awards");
   const hidePopupButton = document.getElementById("setting_hidePopup");
-  const setting_popup = document.getElementById("setting_popup");
+  const awards_popup = document.getElementById("awards_popup");
   const daily = document.getElementById("daily");
   const events = document.getElementById("events");
   const days = document.getElementById("days");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (showPopup) {
     // Show the popup when the "Show Popup" button is clicked
     showPopup.addEventListener("click", function () {
-      setting_popup.style.display = "flex";
+      awards_popup.style.display = "flex";
       event.style.display = "none";
       days.style.display = "";
       daily.setAttribute("class", "active");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Hide the popup when the "Hide Popup" button is clicked
     hidePopupButton.addEventListener("click", function () {
-      setting_popup.style.display = "none";
+      awards_popup.style.display = "none";
     });
     daily.addEventListener("click", function () {
       days.style.display = "";
@@ -182,15 +182,23 @@ document.addEventListener("DOMContentLoaded", function () {
     image.src = el.profile;
     image.alt = "Image";
 
+    
     // Add click event listener to each title
     row.addEventListener("click", () => {
       // Hide all images
+      console.log("1");
       container.querySelectorAll("img").forEach((img, idx) => {
         if (idx === index) {
+          console.log("2");
           img.style.display = "block";
+         localStorage.setItem("number_suit",el.title); 
         } else {
+          console.log("3");
           img.style.display = "none";
+          localStorage.removeItem("number_suit",el.title);
         }
+        // console.log("fjmujhghddgh",el.title);
+        localStorage.setItem("number_suit",el.title);
       });
 
       // Update the selected index
@@ -415,8 +423,10 @@ backDateCardImages();
 
 // ========================== Settings ===============================================// 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get references to the buttons and the popup
+//   // Get references to the buttons and the popup
   let showPopupNumbersuits = document.getElementById("number_of_suits");
+  let numbersuits = document.getElementById("numbersuits");
+  let oneo = localStorage.getItem("number_suit"); 
   let setting = document.getElementById("setting");
   let number_of_suits = document.querySelector(".number_of_suits");
   let ravshellPopup = document.getElementById("ravshellPopup");
@@ -426,8 +436,10 @@ document.addEventListener("DOMContentLoaded", function () {
     showPopupNumbersuits.addEventListener("click", function () {
       number_of_suits.style.display = "block";
       setting.style.display = "none";
-      // console.log("15");
+      numbersuits.textContent = oneo;
+      // location.reload();
     });
+    
     // Hide the popup when the "Hide Popup" button is clicked
     ravshellPopup.addEventListener("click", function () {
       number_of_suits.style.display = "none";
@@ -435,4 +447,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// ========================== Home ===============================================//
+document.addEventListener("DOMContentLoaded", function () {
+  // Get references to the buttons and the popup
+  const showPopup = document.querySelector(".setting");
+  const setting = document.getElementById("setting");
+  let ravshellSetting = document.getElementById("ravshellSetting");
+
+  if (showPopup) {
+    // Show the popup when the "Show Popup" button is clicked
+    showPopup.addEventListener("click", function () {
+      setting.style.display = "block";
+      // ravshellSetting.style.display = "none";
+    });
+    // Hide the popup when the "Hide Popup" button is clicked
+    ravshellSetting.addEventListener("click", function () {
+        setting.style.display = "none"; 
+    });
+  }
+});
+
+
 
