@@ -182,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
     image.src = el.profile;
     image.alt = "Image";
 
-    
     // Add click event listener to each title
     row.addEventListener("click", () => {
       // Hide all images
@@ -191,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (idx === index) {
           console.log("2");
           img.style.display = "block";
-         localStorage.setItem("number_suit",el.title); 
+         localStorage.setItem("number_suit",el.title);
         } else {
           console.log("3");
           img.style.display = "none";
@@ -233,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Append the wrapper to the container
     if(container){
       container.appendChild(wrapper);
-    } 
+    }
     
   });
 });

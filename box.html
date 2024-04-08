@@ -63,13 +63,25 @@
     </div>
 
     <script>
+        let end = 10;
+        let start = 0;
+
+        function ShowCard() {
+            for (let i = start; i < end; i++) {
+                console.log("loop card :- ", i);
+            }
+            start = end;
+            end += 10;
+            console.log("start", start, end)
+        }
+        
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("container");
             const box = document.querySelector(".box");
 
             box.addEventListener("click", function () {
-                for (let i = 0; i < 10; i++) {
-                    
+                ShowCard();
+                for (let i = start - 10; i < end - 10; i++) {
                     const newBox = document.createElement("div");
                     newBox.classList.add("boxItem");
                     newBox.textContent = "Box " + (i + 1);
