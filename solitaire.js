@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the default index for the selected suit
   let selectedIndex = 0;
-
+  
   // Create a heading paragraph tag
   const headingParagraph = document.createElement("p");
   headingParagraph.textContent =

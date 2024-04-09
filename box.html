@@ -27,6 +27,83 @@
             /* Change cursor to pointer on hover */
         }
 
+        .box2 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+        .box3 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+        .box4 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+        .box5 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+
+
         .boxContainer {
             display: flex;
             /* Use flexbox to arrange boxes horizontally */
@@ -60,12 +137,24 @@
         <div class="box"> <!-- Creating a div with class "box" -->
             Click me to create 10 boxes!
         </div>
+
+        <!-- <div class="box2"> 
+            Click me to create 10 boxes!
+        </div>
+        <div class="box3"> 
+            Click me to create 10 boxes!
+        </div>
+        <div class="box4"> 
+            Click me to create 10 boxes!
+        </div>
+        <div class="box5"> 
+            Click me to create 10 boxes!
+        </div> -->
     </div>
 
     <script>
         let end = 10;
         let start = 0;
-
         function ShowCard() {
             for (let i = start; i < end; i++) {
                 console.log("loop card :- ", i);
@@ -74,11 +163,15 @@
             end += 10;
             console.log("start", start, end)
         }
-        
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("container");
             const box = document.querySelector(".box");
 
+            // const box2 = document.querySelector(".box2");
+            // const box3 = document.querySelector(".box3");
+            // const box4 = document.querySelector(".box4");
+            // const box5 = document.querySelector(".box5");
+            
             box.addEventListener("click", function () {
                 ShowCard();
                 for (let i = start - 10; i < end - 10; i++) {
@@ -88,6 +181,42 @@
                     container.appendChild(newBox);
                 }
             });
+            // box2.addEventListener("click", function () {
+            //     ShowCard();
+            //     for (let i = start - 10; i < end - 10; i++) {
+            //         const newBox = document.createElement("div");
+            //         newBox.classList.add("boxItem");
+            //         newBox.textContent = "Box " + (i + 1);
+            //         container.appendChild(newBox);
+            //     }
+            // });
+            // box3.addEventListener("click", function () {
+            //     ShowCard();
+            //     for (let i = start - 10; i < end - 10; i++) {
+            //         const newBox = document.createElement("div");
+            //         newBox.classList.add("boxItem");
+            //         newBox.textContent = "Box " + (i + 1);
+            //         container.appendChild(newBox);
+            //     }
+            // });
+            // box4.addEventListener("click", function () {
+            //     ShowCard();
+            //     for (let i = start - 10; i < end - 10; i++) {
+            //         const newBox = document.createElement("div");
+            //         newBox.classList.add("boxItem");
+            //         newBox.textContent = "Box " + (i + 1);
+            //         container.appendChild(newBox);
+            //     }
+            // });
+            // box5.addEventListener("click", function () {
+            //     ShowCard();
+            //     for (let i = start - 10; i < end - 10; i++) {
+            //         const newBox = document.createElement("div");
+            //         newBox.classList.add("boxItem");
+            //         newBox.textContent = "Box " + (i + 1);
+            //         container.appendChild(newBox);
+            //     }
+            // });
         });
     </script>
 </body>
