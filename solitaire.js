@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the default index for the selected suit
   let selectedIndex = 0;
-  
+
   // Create a heading paragraph tag
   const headingParagraph = document.createElement("p");
   headingParagraph.textContent =
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const image = document.createElement("img");
     image.src = el.profile;
     image.alt = "Image";
-
+    
     // Add click event listener to each title
     row.addEventListener("click", () => {
       // Hide all images
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const subparagraph = document.createElement("p");
     subparagraph.textContent = el.desc;
     wrapper.appendChild(subparagraph);
-
+    
     // Add styles to the wrapper div
     wrapper.style.display = "flex";
     wrapper.style.flexDirection = "column";
