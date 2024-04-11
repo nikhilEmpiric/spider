@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
       start_welcome_popup.style.display = "none";
       // start_welcome.style.display = "block";
       setTimeout(() => { home.style.display = "flex"; } , 1000);
-      
     });
     welcom.addEventListener("click", function () {
       // start_welcome_popup.style.display = "block";
