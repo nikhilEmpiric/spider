@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(container){
       container.appendChild(headingParagraph);
-    }  
+    }
 
   // Loop through the array and create a row for each item
   arr.forEach((el, index) => {

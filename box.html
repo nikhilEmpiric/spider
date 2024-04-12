@@ -65,7 +65,44 @@
             /* Change cursor to pointer on hover */
         }
 
+        .box4 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
 
+        .box5 {
+            width: 200px;
+            /* Width of the box */
+            height: 200px;
+            /* Height of the box */
+            background-color: #3498db;
+            /* Background color of the box */
+            color: #fff;
+            /* Text color */
+            text-align: center;
+            /* Center-align text inside the box */
+            line-height: 200px;
+            /* Center vertically */
+            font-size: 20px;
+            /* Font size of the text */
+            cursor: pointer;
+            /* Change cursor to pointer on hover */
+        }
+        
         .boxContainer {
             display: flex;
             /* Use flexbox to arrange boxes horizontally */
@@ -118,20 +155,6 @@
         .main_cardbox {
             display: none;
         }
-
-         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .boxItem {
-            animation: fadeIn 0.7s ease-in;
-        } 
     </style>
 </head>
 
@@ -140,107 +163,114 @@
         <div class="box"> <!-- Creating a div with class "box" -->
             Click me to create 10 boxes!
         </div>
-        <div class="main_cardbox">
-            <!-- <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div>
-            <div class="cardbox"></div> -->
+        <div class="box2"> <!-- Creating a div with class "box" -->
+            Click me to create 2 boxes!
         </div>
-
-        <!-- <div class="box2"> 
-            Click me to create 10 boxes!
+        <div class="box3"> <!-- Creating a div with class "box" -->
+            Click me to create 3 boxes!
         </div>
-        <div class="box3"> 
-            Click me to create 10 boxes!
+        <div class="box4"> <!-- Creating a div with class "box" -->
+            Click me to create 4 boxes!
         </div>
-        <div class="box4"> 
-            Click me to create 10 boxes!
+        <div class="box5"> <!-- Creating a div with class "box" -->
+            Click me to create 5 boxes!
         </div>
-        <div class="box5">
-            Click me to create 10 boxes!
-        </div> -->
+        <div class="main_cardbox"></div>
     </div>
 
     <script>
         let end = 10;
         let start = 0;
-        function ShowCard() {
-            for (let i = start; i < end; i++) {
-                console.log("loop card :- ", i);
-            }
-            start = end;
-            end += 10;
-            console.log("start", start, end)
-        }
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("container");
             const box = document.querySelector(".box");
             const main_cardbox = document.querySelector(".main_cardbox");
-            // const neBox = document.createElement("div");
-
-            // const box2 = document.querySelector(".box2");
-            // const box3 = document.querySelector(".box3");
-            // const box4 = document.querySelector(".box4");
-            // const box5 = document.querySelector(".box5");
+            const box2 = document.querySelector(".box2");
+            const box3 = document.querySelector(".box3");
+            const box4 = document.querySelector(".box4");
+            const box5 = document.querySelector(".box5");
 
             box.addEventListener("click", function () {
+                // ShowCard();
+                main_cardbox.style.display = "flex";
                 ShowCard();
-                // main_cardbox.style.display = "flex";
-                // neBox.classList.add("main");
-                // neBox.textContent = "Box";
-                // container.appendChild(neBox);
-                setTimeout(() => { main_cardbox.style.display = "flex"; }, 700);
-                for (let i = start - 10; i < end - 10; i++) {
-                    const newBox = document.createElement("div");
-                    newBox.classList.add("boxItem");
-                    newBox.textContent = "Box " + (i + 1);
-                    main_cardbox.appendChild(newBox);
+                for (let i = start; i < end; i++) {
+                    console.log("index....", i)
                 }
+                start = end;
+                end += 10;
+                box.style.display = "none";
             });
+            box.style.margin = "0 0 10px 0";
 
-            // box2.addEventListener("click", function () {
-            //     ShowCard();
-            //     for (let i = start - 10; i < end - 10; i++) {
-            //         const newBox = document.createElement("div");
-            //         newBox.classList.add("boxItem");
-            //         newBox.textContent = "Box " + (i + 1);
-            //         container.appendChild(newBox);
-            //     }
-            // });
-            // box3.addEventListener("click", function () {
-            //     ShowCard();
-            //     for (let i = start - 10; i < end - 10; i++) {
-            //         const newBox = document.createElement("div");
-            //         newBox.classList.add("boxItem");
-            //         newBox.textContent = "Box " + (i + 1);
-            //         container.appendChild(newBox);
-            //     }
-            // });
-            // box4.addEventListener("click", function () {
-            //     ShowCard();
-            //     for (let i = start - 10; i < end - 10; i++) {
-            //         const newBox = document.createElement("div");
-            //         newBox.classList.add("boxItem");
-            //         newBox.textContent = "Box " + (i + 1);
-            //         container.appendChild(newBox);
-            //     }
-            // });
-            // box5.addEventListener("click", function () {
-            //     ShowCard();
-            //     for (let i = start - 10; i < end - 10; i++) {
-            //         const newBox = document.createElement("div");
-            //         newBox.classList.add("boxItem");
-            //         newBox.textContent = "Box " + (i + 1);
-            //         container.appendChild(newBox);
-            //     }
-            // });
+            box2.addEventListener("click", function () {
+                // ShowCard();
+                main_cardbox.style.display = "flex";
+                ShowCard();
+                for (let i = start; i < end; i++) {
+                    console.log("index....", i)
+                }
+                start = end;
+                end += 10;
+                box2.style.display = "none";
+            });
+            box2.style.margin = "0 0 10px 0";
+
+            box3.addEventListener("click", function () {
+                // ShowCard();
+                main_cardbox.style.display = "flex";
+                ShowCard();
+                for (let i = start; i < end; i++) {
+                    console.log("index....", i)
+                }
+                start = end;
+                end += 10;
+                box3.style.display = "none";
+            });
+            box3.style.margin = "0 0 10px 0";
+
+            box4.addEventListener("click", function () {
+                // ShowCard();
+                main_cardbox.style.display = "flex";
+                ShowCard();
+                for (let i = start; i < end; i++) {
+                    console.log("index....", i)
+                }
+                start = end;
+                end += 10;
+                box4.style.display = "none";
+            });
+            box4.style.margin = "0 0 10px 0";
+
+            box5.addEventListener("click", function () {
+                // ShowCard();
+                main_cardbox.style.display = "flex";
+                ShowCard();
+                for (let i = start; i < end; i++) {
+                    console.log("index....", i)
+                }
+                start = end;
+                end += 10;
+                box5.style.display = "none";
+            });
+            box5.style.margin = "0 0 10px 0";
+
+            function ShowCard() {
+                let i = start;
+                const end = 10; // Assuming end is 10
+                const interval = setInterval(() => {
+                    if (i < end) {
+                        console.log("index....", i);
+                        const newBox = document.createElement("div");
+                        newBox.classList.add("boxItem");
+                        newBox.textContent = "Box " + (i + 1);
+                        main_cardbox.appendChild(newBox);
+                        i++;
+                    } else {
+                        clearInterval(interval); // Stop the interval when loop completes
+                    }
+                }, 1000); // Repeat every 2 seconds
+            }
         });
     </script>
 </body>
