@@ -9,7 +9,7 @@
     <style>
         /* CSS to style the box */
         .box {
-            width: 200px;
+            width: 250px;
             /* Width of the box */
             height: 200px;
             /* Height of the box */
@@ -17,7 +17,7 @@
             /* Background color of the box */
             color: #fff;
             /* Text color */
-            text-align: center;
+            /* text-align: center; */
             /* Center-align text inside the box */
             line-height: 200px;
             /* Center vertically */
@@ -25,18 +25,19 @@
             /* Font size of the text */
             cursor: pointer;
             /* Change cursor to pointer on hover */
+            position: relative;
         }
 
         .box2 {
-            width: 200px;
+            width: 250px;
             /* Width of the box */
             height: 200px;
             /* Height of the box */
-            background-color: #3498db;
+            background-color: #db8d34;
             /* Background color of the box */
             color: #fff;
             /* Text color */
-            text-align: center;
+            /* text-align: center; */
             /* Center-align text inside the box */
             line-height: 200px;
             /* Center vertically */
@@ -44,18 +45,21 @@
             /* Font size of the text */
             cursor: pointer;
             /* Change cursor to pointer on hover */
+            position: absolute;
+            top: 8px;
+            left: 25px;
         }
 
         .box3 {
-            width: 200px;
+            width: 250px;
             /* Width of the box */
             height: 200px;
             /* Height of the box */
-            background-color: #3498db;
+            background-color: #34db45;
             /* Background color of the box */
             color: #fff;
             /* Text color */
-            text-align: center;
+            /* text-align: center; */
             /* Center-align text inside the box */
             line-height: 200px;
             /* Center vertically */
@@ -63,18 +67,21 @@
             /* Font size of the text */
             cursor: pointer;
             /* Change cursor to pointer on hover */
+            position: absolute;
+            top: 8px;
+            left: 50px;
         }
 
         .box4 {
-            width: 200px;
+            width: 250px;
             /* Width of the box */
             height: 200px;
             /* Height of the box */
-            background-color: #3498db;
+            background-color: #000000;
             /* Background color of the box */
             color: #fff;
             /* Text color */
-            text-align: center;
+            /* text-align: center; */
             /* Center-align text inside the box */
             line-height: 200px;
             /* Center vertically */
@@ -82,18 +89,21 @@
             /* Font size of the text */
             cursor: pointer;
             /* Change cursor to pointer on hover */
+            position: absolute;
+            top: 8px;
+            left: 75px;
         }
 
         .box5 {
-            width: 200px;
+            width: 250px;
             /* Width of the box */
             height: 200px;
             /* Height of the box */
-            background-color: #3498db;
+            background-color: #002d33;
             /* Background color of the box */
             color: #fff;
             /* Text color */
-            text-align: center;
+            /* text-align: center; */
             /* Center-align text inside the box */
             line-height: 200px;
             /* Center vertically */
@@ -101,6 +111,9 @@
             /* Font size of the text */
             cursor: pointer;
             /* Change cursor to pointer on hover */
+            position: absolute;
+            top: 8px;
+            left: 100px;
         }
         
         .boxContainer {
@@ -161,19 +174,19 @@
 <body>
     <div id="container">
         <div class="box"> <!-- Creating a div with class "box" -->
-            Click me to create 10 boxes!
+            1 Click me to create 10 boxes!
         </div>
         <div class="box2"> <!-- Creating a div with class "box" -->
-            Click me to create 2 boxes!
+            2
         </div>
         <div class="box3"> <!-- Creating a div with class "box" -->
-            Click me to create 3 boxes!
+            3
         </div>
         <div class="box4"> <!-- Creating a div with class "box" -->
-            Click me to create 4 boxes!
+            4
         </div>
         <div class="box5"> <!-- Creating a div with class "box" -->
-            Click me to create 5 boxes!
+            5
         </div>
         <div class="main_cardbox"></div>
     </div>
@@ -189,9 +202,8 @@
             const box3 = document.querySelector(".box3");
             const box4 = document.querySelector(".box4");
             const box5 = document.querySelector(".box5");
-
+            
             box.addEventListener("click", function () {
-                // ShowCard();
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
@@ -204,7 +216,6 @@
             box.style.margin = "0 0 10px 0";
 
             box2.addEventListener("click", function () {
-                // ShowCard();
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
@@ -217,7 +228,6 @@
             box2.style.margin = "0 0 10px 0";
 
             box3.addEventListener("click", function () {
-                // ShowCard();
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
@@ -230,7 +240,6 @@
             box3.style.margin = "0 0 10px 0";
 
             box4.addEventListener("click", function () {
-                // ShowCard();
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
@@ -247,8 +256,9 @@
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
-                    console.log("index....", i)
+                    // console.log("index....", i)
                 }
+                
                 start = end;
                 end += 10;
                 box5.style.display = "none";
@@ -269,7 +279,7 @@
                     } else {
                         clearInterval(interval); // Stop the interval when loop completes
                     }
-                }, 1000); // Repeat every 2 seconds
+                }, 500); // Repeat every 2 seconds
             }
         });
     </script>
