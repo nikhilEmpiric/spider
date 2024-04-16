@@ -115,7 +115,7 @@
             top: 8px;
             left: 100px;
         }
-        
+
         .boxContainer {
             display: flex;
             /* Use flexbox to arrange boxes horizontally */
@@ -202,7 +202,7 @@
             const box3 = document.querySelector(".box3");
             const box4 = document.querySelector(".box4");
             const box5 = document.querySelector(".box5");
-            
+
             box.addEventListener("click", function () {
                 main_cardbox.style.display = "flex";
                 ShowCard();
@@ -251,19 +251,35 @@
             });
             box4.style.margin = "0 0 10px 0";
 
+            // box5.addEventListener("click", function () {
+            //     // ShowCard();
+            //     main_cardbox.style.display = "flex";
+            //     ShowCard();
+            //     for (let i = start; i < end; i++) {
+            //         // console.log("index....", i)
+            //     }
+
+            //     start = end;
+            //     end += 10;
+            //     box5.style.display = "none";
+            // });
+            // box5.style.margin = "0 0 10px 0";
+
             box5.addEventListener("click", function () {
+                // Disable further clicks on box5
+                box5.removeEventListener("click", this);
+
                 // ShowCard();
                 main_cardbox.style.display = "flex";
                 ShowCard();
                 for (let i = start; i < end; i++) {
                     // console.log("index....", i)
                 }
-                
+
                 start = end;
                 end += 10;
                 box5.style.display = "none";
             });
-            box5.style.margin = "0 0 10px 0";
 
             function ShowCard() {
                 let i = start;
@@ -274,13 +290,32 @@
                         const newBox = document.createElement("div");
                         newBox.classList.add("boxItem");
                         newBox.textContent = "Box " + (i + 1);
-                        main_cardbox.appendChild(newBox);
+                        // Insert new boxes before the main_cardbox instead of appending them
+                        main_cardbox.parentNode.insertBefore(newBox, main_cardbox);
                         i++;
                     } else {
                         clearInterval(interval); // Stop the interval when loop completes
                     }
-                }, 500); // Repeat every 2 seconds
+                }, 500); // Repeat every 0.5 seconds
             }
+
+
+            // function ShowCard() {
+            //     let i = start;
+            //     const end = 10; // Assuming end is 10
+            //     const interval = setInterval(() => {
+            //         if (i < end) {
+            //             console.log("index....", i);
+            //             const newBox = document.createElement("div");
+            //             newBox.classList.add("boxItem");
+            //             newBox.textContent = "Box " + (i + 1);
+            //             main_cardbox.appendChild(newBox);
+            //             i++;
+            //         } else {
+            //             clearInterval(interval); // Stop the interval when loop completes
+            //         }
+            //     }, 500); // Repeat every 2 seconds
+            // }
         });
     </script>
 </body>
