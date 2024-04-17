@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if(container){
       container.appendChild(wrapper);
     }
-    
+
   });
 });
 
@@ -424,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //   // Get references to the buttons and the popup
   let showPopupNumbersuits = document.getElementById("number_of_suits");
   let numbersuits = document.getElementById("numbersuits");
-  let oneo = localStorage.getItem("number_suit"); 
+  let oneo = localStorage.getItem("number_suit");
   let setting = document.getElementById("setting");
   let number_of_suits = document.querySelector(".number_of_suits");
   let ravshellPopup = document.getElementById("ravshellPopup");
@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Hide the popup when the "Hide Popup" button is clicked
     ravshellPopup.addEventListener("click", function () {
-      number_of_suits.style.display = "none";
+      // number_of_suits.style.display = "none";
       setting.style.display = "block";
     });
   }
@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Hide the popup when the "Hide Popup" button is clicked
     ravshellSetting.addEventListener("click", function () {
-        setting.style.display = "none"; 
+        setting.style.display = "none";
     });
   }
 });
