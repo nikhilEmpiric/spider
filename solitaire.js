@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
+    
 const arr = [
   {
     title: "1 suit",
@@ -393,7 +393,7 @@ const cardbackData = [
   // Add more objects as needed
 ];
 
-const cardBackContainer = document.querySelector(".cardback");
+const cardBackContainer = document.querySelector(".cardback");  
 
 const backDateCardImages = () => {
   cardbackData.forEach((postData) => {
