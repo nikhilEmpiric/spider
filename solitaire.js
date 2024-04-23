@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Hide the popup when the "Hide Popup" button is clicked
     ravshellPopup.addEventListener("click", function () {
-      // number_of_suits.style.display = "none";
+      number_of_suits.style.display = "none";
       setting.style.display = "block";
     });
   }
