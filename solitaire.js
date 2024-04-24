@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get references to the buttons and the popup
   let showPopupButton = document.querySelector(".showPopup");
@@ -117,8 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let start_welcome_popup = document.querySelector(".start_welcome_popup");
   let accept = document.getElementById("accept");
   let home = document.getElementById("home");
-
-  // Show the popup when the "Show Popup" button is clicked
+  // Show the popup when the "Show Popup" button is clicked.
 
   // Hide the popup when the "Hide Popup" button is clicked
   if (accept) {
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.removeItem("number_suit",el.title);
         }
         // console.log("fjmujhghddgh",el.title);
-        localStorage.setItem("number_suit",el.title);
+        localStorage.setItem("number_suit",el.title); 
       });
 
       // Update the selected index
@@ -369,7 +369,7 @@ const faceDataCardImages = () => {
 
 faceDataCardImages();
 
-// ==========================Card Back ===============================================// 
+// ==========================Card Back ===============================================//
 
 const cardbackData = [
   {
@@ -419,7 +419,7 @@ const backDateCardImages = () => {
 
 backDateCardImages();
 
-// ========================== Settings ===============================================// 
+// ========================== Settings ===============================================//
 document.addEventListener("DOMContentLoaded", function () {
 //   // Get references to the buttons and the popup
   let showPopupNumbersuits = document.getElementById("number_of_suits");
