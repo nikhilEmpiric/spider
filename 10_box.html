@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Solitaire</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .cards-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .card {
+            width: 60px;
+            height: 100px;
+            background-color: #ccc;
+            margin-right: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Spider Solitaire</h1>
+        <div class="cards-line" id="cardsLine"></div>
+        <button onclick="drawCards()" id="drawButton">Draw Cards</button>
+    </div>
+    <script>
+        let cardsLine = []; // Array to store cards
+        let drawCount = 0; // Counter for draw button clicks
+
+        function drawCards() {
+            if (drawCount < 5) {
+                if (cardsLine.length === 1) {
+                    createEmptyBoxes(10);
+                } else {
+                    for (let i = 0; i < 10; i++) {
+                        let newCard = simulateGetNewCard();
+                        cardsLine.push(newCard);
+                    }
+                }
+                drawCount++;
+                displayCardsLine();
+            } else {
+                document.getElementById('drawButton').disabled = true; // Disable the button after 5 clicks
+            }
+        }
+
+        function createEmptyBoxes(numBoxes) {
+            for (let i = 0; i < numBoxes; i++) {
+                cardsLine.push('');
+            }
+        }
+
+        function simulateGetNewCard() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+
+        function displayCardsLine() {
+            const cardsLineElement = document.getElementById('cardsLine');
+            cardsLineElement.innerHTML = '';
+            cardsLine.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card');
+                if (card !== '') {
+                    cardElement.textContent = card;
+                }
+                cardsLineElement.appendChild(cardElement);
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+

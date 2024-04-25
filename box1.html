@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Example</title>
     <!-- Linking the CSS file -->
     <style>
@@ -140,7 +140,6 @@
             /* Font size of the text */
             margin: 10px;
             /* Margin between boxes */
-            
         }
 
         .cardbox {
@@ -191,6 +190,7 @@
             margin: 10px;
             position: relative;
         }
+
         .boxItem2 {
             position: absolute;
             left: 130px;
@@ -203,97 +203,218 @@
             font-size: 20px;
             margin: 10px;
         }
+
+        /* my css here  */
+        .first {
+            border: 1px solid #002d33;
+            display: flex;
+            gap: 10px;
+        }
+
+        /* .first > div {
+            height: 200px;
+            width: 200px;
+            display: flex;
+        } */
+
+        #second_container {
+            display: flex;
+            margin-top: 50px;
+            /* Display divs in a row */
+        }
+
+        #one {
+            height: 200px;
+            width: 200px;
+            display: flex;
+        }
+
+        #second_container>div {
+            width: 200px;
+            /* Set width of each div */
+            height: 200px;
+            /* Set height of each div */
+            margin-left: 10px;
+            /* Set margin between each div */
+            background-color: #ccc;
+            /* Default background color */
+        }
     </style>
 </head>
 
 <body>
-    <div class="ten_box">
+    <!-- <div id="ten_box">
         <div class="boxItem1">1</div>
         <div class="boxItem2">2</div>
     </div>
     <div id="container" class="boxall">
-        <div class="box"> <!-- Creating a div with class "box" -->
+        <div class="box"> 
             1 Click me to create 10 boxes!
         </div>
-        <div class="box2"> <!-- Creating a div with class "box" -->
+        <div class="box2"> 
             2
         </div>
-        <div class="box3"> <!-- Creating a div with class "box" -->
+        <div class="box3">
             3
         </div>
-        <div class="box4"> <!-- Creating a div with class "box" -->
+        <div class="box4"> 
             4
         </div>
-        <div class="box5"> <!-- Creating a div with class "box" -->
+        <div class="box5"> 
             5
         </div>
         <div class="main_cardbox"></div>
+    </div> -->
+
+    <div class="first" id="first_container">
+        <div id="one"></div>
+        <div id="two"  ></div>
+        <div id="three"></div>
+        <div id="four"></div>
+        <div id="five"></div>
     </div>
-
+    <div class="second" id="second_container"></div>
     <script>
-        let end = 10;
-        let start = 0;
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("container");
-            const box = document.querySelector(".box");
-            const main_cardbox = document.querySelector(".main_cardbox");
-            const box2 = document.querySelector(".box2");
-            const box3 = document.querySelector(".box3");
-            const box4 = document.querySelector(".box4");
-            const box5 = document.querySelector(".box5");
+        // Select the container element
+        var container = document.getElementById("second_container");
+        var marginLeft = 0; // Initial margin-left value
+        var divCount = 0; // Initialize new div count
 
-            box.addEventListener("click", function () {
-                main_cardbox.style.display = "flex";
-                ShowCard();
-                box.style.display = "none";
+        // Loop to create and append div elements
+        for (var i = 1; i <= 5; i++) {
+            // Create a new div element
+            var newDiv = document.createElement("div");
+
+            // Set the innerHTML of the div to the current value of i
+            newDiv.innerHTML = i;
+
+            // Set background color based on index
+            newDiv.style.backgroundColor = getRandomColor();
+
+            // Set margin-left dynamically
+            newDiv.style.marginLeft = marginLeft + "px";
+            // Update marginLeft for the next div
+            marginLeft += 10; // Increment marginLeft by 10px for each div
+
+            // Add click event listener to each div
+            newDiv.addEventListener("click", function () {
+                addRedDivs();
             });
-            box.style.margin = "0 0 10px 0";
 
-            box2.addEventListener("click", function () {
-                main_cardbox.style.display = "flex";
-                ShowCard();
-                box2.style.display = "none";
-            });
-            box2.style.margin = "0 0 10px 0";
+            // Append the new div to the container
+            container.appendChild(newDiv);
 
-            box3.addEventListener("click", function () {
-                main_cardbox.style.display = "flex";
-                ShowCard();
-                box3.style.display = "none";
-            });
-            box3.style.margin = "0 0 10px 0";
-
-            box4.addEventListener("click", function () {
-                main_cardbox.style.display = "flex";
-                ShowCard();
-                box4.style.display = "none";
-            });
-            box4.style.margin = "0 0 10px 0";
-
-            box5.addEventListener("click", function () {
-                main_cardbox.style.display = "flex";
-                ShowCard();
-                box5.style.display = "none";
-            });
-            box5.style.margin = "0 0 10px 0";
-
-            function ShowCard() {
-                let i = start;
-                const end = 1; // Assuming end is 10
-                const interval = setInterval(() => {
-                    if (i < end) {
-                        console.log("index....", i);
-                        const newBox = document.createElement("div");
-                        newBox.classList.add("boxItem");
-                        newBox.textContent = "Box " + (i + 1);
-                        main_cardbox.appendChild(newBox);
-                        i++;
-                    } else {
-                        clearInterval(interval); // Stop the interval when loop completes
-                    }
-                }, 500); // Repeat every 2 seconds
+            // Increment div count
+            divCount++;
+        }
+        
+        // Function to generate a random color
+        first_container.appendChild(one);
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
             }
-        });
+            return color;
+        }
+
+        // Function to add 10 red divs to the corresponding container
+        function addRedDivs() {
+            var firstContainer = document.getElementById("first_container");
+            for (var i = 0; i < 10; i++) {
+                var newRedDiv = document.createElement("div");
+                newRedDiv.style.backgroundColor = "red";
+                newRedDiv.style.width = "200px";
+                newRedDiv.style.height = "200px";
+                newRedDiv.style.marginRight = "10px";
+                firstContainer.appendChild(newRedDiv);
+            }
+            
+            // Add line break after every 10 new divs
+            divCount += 10; // Increment div count by 10
+            if (divCount % 10 === 0) {
+                var lineBreak = document.createElement("br");
+                firstContainer.appendChild(lineBreak);
+            }
+        }
+
+      // let end = 10;
+      // let start = 0;
+
+      // document.addEventListener("DOMContentLoaded", function () {
+      //     const container = document.getElementById("container");
+      //     const box = document.querySelector(".box");
+      //     const main_cardbox = document.querySelector(".main_cardbox");
+      //     const box2 = document.querySelector(".box2");
+      //     const box3 = document.querySelector(".box3");
+      //     const box4 = document.querySelector(".box4");
+      //     const box5 = document.querySelector(".box5");
+
+      //     box.addEventListener("click", function () {
+      //         main_cardbox.style.display = "flex";
+      //         ShowCard();
+      //         box.style.display = "none";
+      //     });
+      //     box.style.margin = "0 0 10px 0";
+
+      //     box2.addEventListener("click", function () {
+      //         main_cardbox.style.display = "flex";
+      //         ShowCard();
+      //         box2.style.display = "none";
+      //     });
+      //     box2.style.margin = "0 0 10px 0";
+
+      //     box3.addEventListener("click", function () {
+      //         main_cardbox.style.display = "flex";
+      //         ShowCard();
+      //         box3.style.display = "none";
+      //     });
+      //     box3.style.margin = "0 0 10px 0";
+
+      //     box4.addEventListener("click", function () {
+      //         main_cardbox.style.display = "flex";
+      //         ShowCard();
+      //         box4.style.display = "none";
+      //     });
+      //     box4.style.margin = "0 0 10px 0";
+
+      //     box5.addEventListener("click", function () {
+      //         main_cardbox.style.display = "flex";
+      //         ShowCard();
+      //         box5.style.display = "none";
+      //     });
+      //     box5.style.margin = "0 0 10px 0";
+
+      //     function ShowCard() {
+      //         let i = start;
+      //         const end = 1; // Assuming end is 10
+      //         const interval = setInterval(() => {
+      //             if (i < end) {
+      //                 console.log("index....", i);
+      //                 const newBox = document.createElement("div");
+      //                 newBox.classList.add("boxItem");
+      //                 newBox.textContent = "Box " + (i + 1);
+      //                 main_cardbox.appendChild(newBox);
+      //                 i++;
+      //             } else {
+      //                 clearInterval(interval); // Stop the interval when loop completes
+      //             }
+      //         }, 500); // Repeat every 2 seconds
+      //     }
+      // });
+
+      // var newElement = document.createElement("h2");
+      // var newText = document.createTextNode("jbnjn nj dn nj jjl");
+
+      // newElement.appendChild(newText);
+      // document.getElementById("ten_box").appendChild(newElement);
+
+      // // console.log(newElement);
+      // // console.log(newText);;
+
+      // boxItem1.appendChild(boxItem);
+      // document.getElementById("ten_box").appendChild(boxItem1);
     </script>
 </body>
 
