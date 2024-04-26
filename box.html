@@ -174,7 +174,11 @@
             bottom: 0;
         }
 
-        .ten_box {
+        .ten_box1,
+        .ten_box2,
+        .ten_box3,
+        .ten_box4,
+        .ten_box5 {
             display: flex;
             gap: 10px;
         }
@@ -188,24 +192,19 @@
             line-height: 200px;
             font-size: 20px;
             margin: 10px;
+            display: flex;
         }
     </style>
 </head>
 
 <body>
-    <div class="ten_box">
-        <div class="boxItem1">1</div>
-        <div class="boxItem1">2</div>
-        <div class="boxItem1">3</div>
-        <div class="boxItem1">4</div>
-        <div class="boxItem1">5</div>
-        <div class="boxItem1">6</div>
-        <div class="boxItem1">7</div>
-        <div class="boxItem1">8</div>
-        <div class="boxItem1">9</div>
-        <div class="boxItem1">10</div>
-
+    <div class="ten_box1">
     </div>
+    <div class="ten_box2"></div>
+    <div class="ten_box3"> </div>
+    <div class="ten_box4"> </div>
+    <div class="ten_box5"> </div>
+
     <div id="container" class="boxall">
         <div class="box"> <!-- Creating a div with class "box" -->
             1 Click me to create 10 boxes!
@@ -226,12 +225,19 @@
     </div>
 
     <script>
+
         let end = 10;
         let start = 0;
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("container");
             const box = document.querySelector(".box");
             const main_cardbox = document.querySelector(".main_cardbox");
+            // const boxItem1 = document.querySelector(".boxItem1");
+            const ten_box1 = document.querySelector(".ten_box1");
+            const ten_box2 = document.querySelector(".ten_box2");
+            const ten_box3 = document.querySelector(".ten_box3");
+            const ten_box4 = document.querySelector(".ten_box4");
+            const ten_box5 = document.querySelector(".ten_box5");
             const box2 = document.querySelector(".box2");
             const box3 = document.querySelector(".box3");
             const box4 = document.querySelector(".box4");
@@ -251,7 +257,7 @@
 
             box2.addEventListener("click", function () {
                 main_cardbox.style.display = "flex";
-                ShowCard();
+                ShowCard2();
                 // for (let i = start; i < end; i++) {
                 //     console.log("index....", i)
                 // }
@@ -263,7 +269,7 @@
 
             box3.addEventListener("click", function () {
                 main_cardbox.style.display = "flex";
-                ShowCard();
+                ShowCard3();
                 // for (let i = start; i < end; i++) {
                 //     console.log("index....", i)
                 // }
@@ -275,7 +281,7 @@
 
             box4.addEventListener("click", function () {
                 main_cardbox.style.display = "flex";
-                ShowCard();
+                ShowCard4();
                 // for (let i = start; i < end; i++) {
                 //     console.log("index....", i)
                 // }
@@ -288,7 +294,7 @@
             box5.addEventListener("click", function () {
                 // ShowCard();
                 main_cardbox.style.display = "flex";
-                ShowCard();
+                ShowCard5();
                 // for (let i = start; i < end; i++) {
                 //     // console.log("index....", i)
                 // }
@@ -343,7 +349,76 @@
                         const newBox = document.createElement("div");
                         newBox.classList.add("boxItem");
                         newBox.textContent = "Box " + (i + 1);
-                        main_cardbox.appendChild(newBox);
+                        ten_box1.appendChild(newBox);
+                        console.log(newBox);
+                        i++;
+                    } else {
+                        clearInterval(interval); // Stop the interval when loop completes
+                    }
+                }, 500); // Repeat every 2 seconds
+            }
+            function ShowCard2() {
+                let i = start;
+                const end = 10; // Assuming end is 10
+                const interval = setInterval(() => {
+                    if (i < end) {
+                        console.log("index....", i);
+                        const newBox = document.createElement("div");
+                        newBox.classList.add("boxItem");
+                        newBox.textContent = "Box " + (i + 1);
+                        ten_box2.appendChild(newBox);
+                        console.log(newBox);
+                        i++;
+                    } else {
+                        clearInterval(interval); // Stop the interval when loop completes
+                    }
+                }, 500); // Repeat every 2 seconds
+            }
+            function ShowCard3() {
+                let i = start;
+                const end = 10; // Assuming end is 10
+                const interval = setInterval(() => {
+                    if (i < end) {
+                        console.log("index....", i);
+                        const newBox = document.createElement("div");
+                        newBox.classList.add("boxItem");
+                        newBox.textContent = "Box " + (i + 1);
+                        ten_box3.appendChild(newBox);
+                        console.log(newBox);
+                        i++;
+                    } else {
+                        clearInterval(interval); // Stop the interval when loop completes
+                    }
+                }, 500); // Repeat every 2 seconds
+            }
+            function ShowCard4() {
+                let i = start;
+                const end = 10; // Assuming end is 10
+                const interval = setInterval(() => {
+                    if (i < end) {
+                        console.log("index....", i);
+                        const newBox = document.createElement("div");
+                        newBox.classList.add("boxItem");
+                        newBox.textContent = "Box " + (i + 1);
+                        ten_box4.appendChild(newBox);
+                        console.log(newBox);
+                        i++;
+                    } else {
+                        clearInterval(interval); // Stop the interval when loop completes
+                    }
+                }, 500); // Repeat every 2 seconds
+            }
+            function ShowCard5() {
+                let i = start;
+                const end = 10; // Assuming end is 10
+                const interval = setInterval(() => {
+                    if (i < end) {
+                        console.log("index....", i);
+                        const newBox = document.createElement("div");
+                        newBox.classList.add("boxItem");
+                        newBox.textContent = "Box " + (i + 1);
+                        ten_box5.appendChild(newBox);
+                        console.log(newBox);
                         i++;
                     } else {
                         clearInterval(interval); // Stop the interval when loop completes

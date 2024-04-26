@@ -224,8 +224,6 @@
         }
 
         #one {
-            height: 200px;
-            width: 200px;
             display: flex;
         }
 
@@ -243,28 +241,6 @@
 </head>
 
 <body>
-    <!-- <div id="ten_box">
-        <div class="boxItem1">1</div>
-        <div class="boxItem2">2</div>
-    </div>
-    <div id="container" class="boxall">
-        <div class="box"> 
-            1 Click me to create 10 boxes!
-        </div>
-        <div class="box2"> 
-            2
-        </div>
-        <div class="box3">
-            3
-        </div>
-        <div class="box4"> 
-            4
-        </div>
-        <div class="box5"> 
-            5
-        </div>
-        <div class="main_cardbox"></div>
-    </div> -->
 
     <div class="first" id="first_container">
         <div id="one"></div>
@@ -277,13 +253,16 @@
     <script>
         // Select the container element
         var container = document.getElementById("second_container");
+
         var marginLeft = 0; // Initial margin-left value
         var divCount = 0; // Initialize new div count
 
         // Loop to create and append div elements
         for (var i = 1; i <= 5; i++) {
+
             // Create a new div element
             var newDiv = document.createElement("div");
+            newDiv.classList.add("mystyle");
 
             // Set the innerHTML of the div to the current value of i
             newDiv.innerHTML = i;
@@ -307,12 +286,13 @@
             // Increment div count
             divCount++;
         }
-        
+
         // Function to generate a random color
-        first_container.appendChild(one);
+        // first_container.appendChild(one);
         function getRandomColor() {
             var letters = '0123456789ABCDEF';
             var color = '#';
+
             for (var i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
@@ -321,16 +301,21 @@
 
         // Function to add 10 red divs to the corresponding container
         function addRedDivs() {
+
             var firstContainer = document.getElementById("first_container");
+            const one = document.getElementById("one");
+            const two = document.getElementById("two");
             for (var i = 0; i < 10; i++) {
                 var newRedDiv = document.createElement("div");
                 newRedDiv.style.backgroundColor = "red";
                 newRedDiv.style.width = "200px";
                 newRedDiv.style.height = "200px";
                 newRedDiv.style.marginRight = "10px";
-                firstContainer.appendChild(newRedDiv);
+                one.appendChild(newRedDiv);
+                firstContainer.appendChild(one);
+                console.log(newRedDiv);
             }
-            
+
             // Add line break after every 10 new divs
             divCount += 10; // Increment div count by 10
             if (divCount % 10 === 0) {
@@ -339,8 +324,9 @@
             }
         }
 
-      // let end = 10;
-      // let start = 0;
+
+      var end = 10;
+      var start = 0;
 
       // document.addEventListener("DOMContentLoaded", function () {
       //     const container = document.getElementById("container");
