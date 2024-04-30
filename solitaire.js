@@ -448,6 +448,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ========================== Home ===============================================//
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get references to the buttons and the popup
   const showPopup = document.querySelector(".setting");
